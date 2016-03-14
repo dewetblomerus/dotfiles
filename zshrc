@@ -99,7 +99,6 @@ alias jdraft="bundle exec jekyll draft"
 alias jpublish="bundle exec jekyll publish"
 alias junpublish"bundle exec jekyll unpublish"
 
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export PATH=$HOME/bin:$PATH
