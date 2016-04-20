@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/dewet/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,7 +49,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/home/dewet/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export PATH=~/bin:$PATH #exercism.io needed this
@@ -82,12 +82,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gits="git status"
 alias gitl="git log"
-alias lan="cd ~/langana"
+alias lan="cd ~/code/langana"
 alias gitb="git branch"
 alias rs="rails s"
-alias ism="cd /home/dewet/exercism/ruby"
+alias ism="cd ~/exercism/ruby"
 alias pin="ping 8.8.8.8"
-alias rub="cd /home/dewet/ruby"
+alias rub="cd ~/ruby"
 alias gpush="git push"
 alias gpull="git pull"
 alias gph="git push heroku master"
@@ -98,7 +98,10 @@ alias jpost="bundle exec jekyll post"
 alias jdraft="bundle exec jekyll draft"
 alias jpublish="bundle exec jekyll publish"
 alias junpublish="bundle exec jekyll unpublish"
-alias cod="cd /home/dewet/ruby/codility"
+alias cod="cd ~/ruby/codility"
+alias rok="~/bin/ngrok http -subdomain=dewet 3000"
+alias rspec="bundle exec rspec"
+alias rake db:reset="bundle exec rake db:reset"
 
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
