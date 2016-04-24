@@ -106,3 +106,9 @@ alias rake db:reset="bundle exec rake db:reset"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+function lazygit() {
+    git add .
+    git commit -a -m "$1"
+    git push
+}
