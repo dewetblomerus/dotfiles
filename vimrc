@@ -75,6 +75,7 @@ set nobackup
 set nowritebackup
 set nowrap
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*node_modules*
 " test end
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 noremap <Leader>s :update<CR>
