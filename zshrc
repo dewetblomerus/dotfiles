@@ -100,16 +100,15 @@ alias jpublish="bundle exec jekyll publish"
 alias junpublish="bundle exec jekyll unpublish"
 alias cod="cd ~/ruby/codility"
 alias rok="~/bin/ngrok http -subdomain=dewet 3000"
-alias rspec="bundle exec rspec"
 alias rake db:reset="bundle exec rake db:reset"
 alias lin="cd ~/code/scripts/linux-laptop"
+alias lay="cd ~/code/ergodox/ergodox-firmware/firmware/keyboard/ergodox/layout"
 
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 function lazygit() {
-    git add .
+    git add -A
     git commit -a -m "$1"
     git push
 }
