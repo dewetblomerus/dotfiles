@@ -1,5 +1,5 @@
 #!/bin/bash
-FOLDERS=(bin code dewetblomerus.github.io Documents Downloads Music Pictures Public Templates Videos VirtualBox-VMs);
+FOLDERS=(bin code dewetblomerus.github.io Documents Downloads Dropbox Music Pictures Public Templates Videos VirtualBox-VMs);
 SSDPATH=/media/dewet/ssd
 for i in ${FOLDERS[@]}
 do
