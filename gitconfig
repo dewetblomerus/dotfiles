@@ -5,3 +5,6 @@
 [user]
 	email = dewet@blomerus.org
 	name = De Wet Blomerus
+[push]
+	default = simple
+
