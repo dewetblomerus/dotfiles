@@ -1,0 +1,7 @@
+[alias]
+    co = checkout
+    cm = commit
+    br = branch
+[user]
+	email = dewet@blomerus.org
+	name = De Wet Blomerus
