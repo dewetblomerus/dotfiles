@@ -105,6 +105,7 @@ alias lin="cd ~/code/scripts/linux-laptop"
 alias lay="cd ~/code/ergodox/ergodox-firmware/firmware/keyboard/ergodox/layout"
 alias rai="cd ~/code/rails"
 alias stree="open -a SourceTree"
+alias dolab="ssh root@139.59.30.248"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
