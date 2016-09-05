@@ -104,6 +104,7 @@ alias rake db:reset="bundle exec rake db:reset"
 alias lin="cd ~/code/scripts/linux-laptop"
 alias lay="cd ~/code/ergodox/ergodox-firmware/firmware/keyboard/ergodox/layout"
 alias rai="cd ~/code/rails"
+alias stree="open -a SourceTree"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
