@@ -77,6 +77,7 @@ alias rai="cd ~/code/rails"
 alias stree="open -a SourceTree"
 alias dolab="ssh root@139.59.30.248"
 alias lab="cd ~/code/gitlab"
+alias com="cd ~/code/gitlab/www-gitlab-com"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

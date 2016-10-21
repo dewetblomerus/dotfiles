@@ -6,7 +6,7 @@
 	email = dewet@blomerus.org
 	name = De Wet Blomerus
 [push]
-	default = simple
+	default = current
 
 [core]
 	editor = vim
