@@ -78,12 +78,29 @@ alias stree="open -a SourceTree"
 alias dolab="ssh root@139.59.30.248"
 alias lab="cd ~/code/gitlab"
 alias com="cd ~/code/gitlab/www-gitlab-com"
+alias dm="docker-machine"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-function lazygit() {
+
+function lazypush() {
     git add -A
     git commit -a -m "$1"
     git push
 }
+
+function lazyamend() {
+  git stash
+  git rebase master
+  git stash pop
+  git add -A
+  git commit --amend
+}
+
+#eval "$(docker-machine env tlab)"
+
+function down() {
+  ssh -t "$1" sudo init 0
+}
+
