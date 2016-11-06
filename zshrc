@@ -79,10 +79,15 @@ alias dolab="ssh root@139.59.30.248"
 alias lab="cd ~/code/gitlab"
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias dm="docker-machine"
+alias password="~/code/ruby/keep-talking/password.rb"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+function addssh() {
+  cat ~/.ssh/id_rsa.pub | ssh dewet@"$1" 'mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
+}
 
 function lazypush() {
     git add -A
@@ -104,3 +109,12 @@ function down() {
   ssh -t "$1" sudo init 0
 }
 
+function docreate() {
+  doctl compute droplet create "$1" --size 4gb --image ubuntu-16-04-x64 --region lon1 --ssh-keys 6d:dc:b6:ad:c4:9e:f5:a0:01:c7:d9:41:0e:b1:e9:44
+}
+
+alias drops="doctl compute d list | grep dewet"
+
+function dodelete() {
+  doctl compute d delete "$1"
+}

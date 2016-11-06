@@ -29,6 +29,7 @@ call vundle#begin()
   Bundle 'tpope/vim-endwise'
   Bundle 'jgdavey/tslime.vim'
   Bundle 'vim-ruby/vim-ruby'
+  Bundle 'takac/vim-hardtime'
   " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -96,3 +97,4 @@ function! RenameFile()
   endif
 endfunction
 map <leader>n :call RenameFile()<c
+let g:hardtime_default_on = 1
