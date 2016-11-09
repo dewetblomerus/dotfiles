@@ -1,0 +1,4 @@
+### Run this on the VM to set up the local GitLab mirror
+echo "deb http://mirror/ee xenial main" | sudo tee -a /etc/apt/sources.list \
+sudo curl -L "https://packages.gitlab.com/gitlab/gitlab-ee/gpgkey" 2> /dev/null | sudo apt-key add - &>/dev/null \
+sudo apt-get update

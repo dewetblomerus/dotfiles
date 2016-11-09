@@ -1,28 +1,20 @@
-# Path to your oh-my-zsh installation.
+###### Zshell Configuration
 export ZSH=~/.oh-my-zsh
-
 ZSH_THEME="robbyrussell"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git ssh-agent)
 
 # User configuration
+####### PATH
+
+# Kitchen Sink
 
 export PATH="~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export PATH=~/bin:$PATH #exercism.io needed this
@@ -36,20 +28,10 @@ else
   export EDITOR='mvim'
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Aliases
 alias gits="git status"
 alias gitl="git log"
 alias lan="cd ~/code/langana"
@@ -61,7 +43,6 @@ alias rub="cd ~/code/ruby"
 alias gpush="git push"
 alias gpull="git pull"
 alias gph="git push heroku master"
-alias qui="cd ~/ruby/code-quiz"
 alias jes="bundle exec jekyll serve"
 alias dew="cd ~/dewetblomerus.github.io"
 alias jpost="bundle exec jekyll post"
@@ -74,8 +55,6 @@ alias rake db:reset="bundle exec rake db:reset"
 alias lin="cd ~/code/scripts/linux-laptop"
 alias lay="cd ~/code/ergodox/ergodox-firmware/firmware/keyboard/ergodox/layout"
 alias rai="cd ~/code/rails"
-alias stree="open -a SourceTree"
-alias dolab="ssh root@139.59.30.248"
 alias lab="cd ~/code/gitlab"
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias dm="docker-machine"
@@ -85,9 +64,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-function addssh() {
-  cat ~/.ssh/id_rsa.pub | ssh dewet@"$1" 'mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
-}
+###### Git
 
 function lazypush() {
     git add -A
@@ -103,11 +80,7 @@ function lazyamend() {
   git commit --amend
 }
 
-#eval "$(docker-machine env tlab)"
-
-function down() {
-  ssh -t "$1" sudo init 0
-}
+###### Digital Ocean
 
 function docreate() {
   doctl compute droplet create "$1" --size 4gb --image ubuntu-16-04-x64 --region lon1 --ssh-keys 6d:dc:b6:ad:c4:9e:f5:a0:01:c7:d9:41:0e:b1:e9:44
@@ -118,3 +91,58 @@ alias drops="doctl compute d list | grep dewet"
 function dodelete() {
   doctl compute d delete "$1"
 }
+
+###### Docker
+
+function dmcreate() {
+  docker-machine create \
+    --vmwarefusion-cpu-count 4 \
+    --vmwarefusion-memory-size 2400 \
+    --vmwarefusion-disk-size 30000 \
+    --driver vmwarefusion "$1"
+}
+
+function dcon() {
+  eval "$(docker-machine env $1)"
+}
+
+function drun() {
+  docker run --detach \
+    --env GITLAB_OMNIBUS_CONFIG="external_url '$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222;" \
+    --hostname "$1"\
+    -p 80:80 -p 2222:22 \
+    --name "$1" \
+    gitlab/gitlab-ee:latest
+}
+
+###### VMware Fusion
+
+alias vmdhcp="cat /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf"
+
+alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun" #I could not get the Libarary folder to properly add to the path
+
+function vmstart() {
+  vmrun start vm/"$1".vmwarevm nogui
+}
+
+function vmstop() {
+  vmrun stop vm/"$1".vmwarevm
+}
+
+###### SSH
+
+function down() {
+  ssh -t "$1" sudo init 0
+}
+
+function addkey() {
+  cat ~/.ssh/id_rsa.pub | ssh dewet@"$1" 'mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
+}
+
+###### Mirror
+
+function addmirror() {
+  ssh root@"$1"
+  echo 'deb http://mirror/ee xenial main' | ssh root@"$1" "cat >> /etc/apt/sources.list"
+}
+# echo "deb http://mirror/ee xenial main" | sudo tee -a /etc/apt/sources.list && sudo curl -L "https://packages.gitlab.com/gitlab/gitlab-ee/gpgkey" 2> /dev/null | sudo apt-key add - &>/dev/null && sudo apt-get update
