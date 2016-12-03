@@ -1,7 +1,7 @@
 ###### Zshell Configuration
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -9,17 +9,23 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git ssh-agent)
 
 # User configuration
+
+source $ZSH/oh-my-zsh.sh
+
 ####### PATH
 
 # Kitchen Sink
 
 export PATH="~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
+#rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export PATH=~/bin:$PATH #exercism.io needed this
-
-source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -40,6 +46,7 @@ alias rs="rails s"
 alias ism="cd ~/exercism"
 alias pin="ping 8.8.8.8"
 alias rub="cd ~/code/ruby"
+alias eli="cd ~/code/elixir"
 alias gpush="git push"
 alias gpull="git pull"
 alias gph="git push heroku master"
@@ -59,10 +66,6 @@ alias lab="cd ~/code/gitlab"
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias dm="docker-machine"
 alias password="~/code/ruby/keep-talking/password.rb"
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 ###### Git
 
@@ -94,6 +97,12 @@ function dodelete() {
 
 ###### Docker
 
+eval "$(docker-machine env tlab)"
+
+function dcon() {
+  eval "$(docker-machine env $1)"
+}
+
 function dmcreate() {
   docker-machine create \
     --vmwarefusion-cpu-count 4 \
@@ -102,34 +111,55 @@ function dmcreate() {
     --driver vmwarefusion "$1"
 }
 
-function dcon() {
-  eval "$(docker-machine env $1)"
-}
-
 function drun() {
   docker run --detach \
-    --env GITLAB_OMNIBUS_CONFIG="external_url '$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222;" \
+    --env GITLAB_OMNIBUS_CONFIG="external_url http://'$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222;" \
     --hostname "$1"\
     -p 80:80 -p 2222:22 \
     --name "$1" \
-    gitlab/gitlab-ee:latest
+    gitlab/gitlab-ee:"$2"
 }
 
 ###### VMware Fusion
 
-alias vmdhcp="cat /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf"
+alias vmdhcp=#"cat /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf"
+alias vmdhcp="ruby ~/dotfiles/vmdhcp.rb"
 
 alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun" #I could not get the Libarary folder to properly add to the path
 
 function vmstart() {
-  vmrun start vm/"$1".vmwarevm nogui
+  for var in "$@"
+  do
+    vmrun start ~/vm/"$var".vmwarevm nogui
+  done
 }
 
 function vmstop() {
-  vmrun stop vm/"$1".vmwarevm
+  for var in "$@"
+  do
+    vmrun stop ~/vm/"$var".vmwarevm
+  done
+}
+
+function vmcreate() {
+  for var in "$@"
+  do
+    vmrun clone ~/vm/ubuntu.vmwarevm/ubuntu.vmx ~/vm/"$var".vmwarevm/"$var".vmx linked -cloneName="$var"
+  done
+  ruby ~/dotfiles/vmdhcp.rb
+  vmstart "$@"
 }
 
 ###### SSH
+
+function vmhostname() {
+  for var in "$@"
+  do
+    ssh root@"$var" sed -i "s/ubuntu/"$var"/g" /etc/hosts
+    ssh root@"$var" sed -i "s/ubuntu/"$var"/g" /etc/hostname
+    ssh root@"$var" hostname "$var"
+  done
+}
 
 function down() {
   ssh -t "$1" sudo init 0
@@ -139,10 +169,14 @@ function addkey() {
   cat ~/.ssh/id_rsa.pub | ssh dewet@"$1" 'mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
 }
 
-###### Mirror
+###### GitLab
 
-function addmirror() {
-  ssh root@"$1"
-  echo 'deb http://mirror/ee xenial main' | ssh root@"$1" "cat >> /etc/apt/sources.list"
+function rsync-gitlab() {
+  for var in "$@"
+  do
+    vmhostname "$var"
+    rsync ~/gitlab-packages/gitlab-* root@"$var":~
+    rsync ~/dotfiles/install-gitlab.sh root@"$var":~
+  done
 }
-# echo "deb http://mirror/ee xenial main" | sudo tee -a /etc/apt/sources.list && sudo curl -L "https://packages.gitlab.com/gitlab/gitlab-ee/gpgkey" 2> /dev/null | sudo apt-key add - &>/dev/null && sudo apt-get update
+

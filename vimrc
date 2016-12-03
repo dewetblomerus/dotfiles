@@ -13,6 +13,7 @@ call vundle#begin()
   Plugin 'kien/ctrlp.vim'
   Plugin 'bling/vim-airline'
   Plugin 'airblade/vim-gitgutter'
+  Plugin 'elixir-lang/vim-elixir'
   Bundle 'csexton/trailertrash.vim'
   Plugin 'kchmck/vim-coffee-script'
   Bundle 'lukaszkorecki/CoffeeTags'
@@ -30,6 +31,7 @@ call vundle#begin()
   Bundle 'jgdavey/tslime.vim'
   Bundle 'vim-ruby/vim-ruby'
   Bundle 'takac/vim-hardtime'
+  Bundle 'git://github.com/nathanaelkane/vim-command-w.git'
   " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
@@ -98,3 +100,9 @@ function! RenameFile()
 endfunction
 map <leader>n :call RenameFile()<c
 let g:hardtime_default_on = 1
+let g:hardtime_allow_different_key = 1
+let g:hardtime_maxcount = 2
+let g:hardtime_timeout = 2000
+
+autocmd Filetype markdown setlocal ts=3 sts=3 sw=3
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
