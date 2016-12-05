@@ -105,4 +105,3 @@ let g:hardtime_maxcount = 2
 let g:hardtime_timeout = 2000
 
 autocmd Filetype markdown setlocal ts=3 sts=3 sw=3
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
