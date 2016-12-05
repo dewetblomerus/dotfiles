@@ -66,6 +66,7 @@ alias lab="cd ~/code/gitlab"
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias dm="docker-machine"
 alias password="~/code/ruby/keep-talking/password.rb"
+alias code="cd ~/Dropbox/code"
 
 ###### Git
 
