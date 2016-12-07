@@ -104,4 +104,5 @@ let g:hardtime_allow_different_key = 1
 let g:hardtime_maxcount = 2
 let g:hardtime_timeout = 2000
 
-autocmd Filetype markdown setlocal ts=3 sts=3 sw=3
+autocmd Filetype markdown setlocal sts=3 sw=3
+autocmd Filetype ruby setlocal sts=2 sw=2
