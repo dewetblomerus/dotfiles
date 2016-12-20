@@ -98,7 +98,7 @@ function dodelete() {
 
 ###### Docker
 
-eval "$(docker-machine env tlab)"
+#eval "$(docker-machine env tlab)"
 
 function dcon() {
   eval "$(docker-machine env $1)"
@@ -176,8 +176,11 @@ function rsync-gitlab() {
   for var in "$@"
   do
     vmhostname "$var"
-    rsync ~/gitlab-packages/gitlab-* root@"$var":~
+    rsync ~/omnibus-packages/gitlab-* root@"$var":~
     rsync ~/dotfiles/install-gitlab.sh root@"$var":~
   done
 }
 
+function mirror-rsync() {
+  rsync -hguavrP root@mirror:/var/spool/apt-mirror/mirror/packages.gitlab.com/gitlab/gitlab-ee/ubuntu/pool/xenial/main/g/gitlab-ee/ ~/omnibus-packages/ee/
+}
