@@ -64,6 +64,7 @@ alias lay="cd ~/code/ergodox/ergodox-firmware/firmware/keyboard/ergodox/layout"
 alias rai="cd ~/code/rails"
 alias lab="cd ~/code/gitlab"
 alias com="cd ~/code/gitlab/www-gitlab-com"
+alias cirun="gitlab-ci-multi-runner"
 alias dm="docker-machine"
 alias password="~/code/ruby/keep-talking/password.rb"
 alias code="cd ~/Dropbox/code"
@@ -87,7 +88,7 @@ function lazyamend() {
 ###### Digital Ocean
 
 function docreate() {
-  doctl compute droplet create "$1" --size 4gb --image ubuntu-16-04-x64 --region lon1 --ssh-keys 6d:dc:b6:ad:c4:9e:f5:a0:01:c7:d9:41:0e:b1:e9:44
+  doctl compute droplet create "$1" --size 4gb --image docker-16-04 --region lon1 --ssh-keys 6d:dc:b6:ad:c4:9e:f5:a0:01:c7:d9:41:0e:b1:e9:44
 }
 
 alias drops="doctl compute d list | grep dewet"
@@ -98,7 +99,7 @@ function dodelete() {
 
 ###### Docker
 
-#eval "$(docker-machine env tlab)"
+alias deval="eval $(docker-machine env tlab)"
 
 function dcon() {
   eval "$(docker-machine env $1)"
@@ -167,7 +168,7 @@ function down() {
 }
 
 function addkey() {
-  cat ~/.ssh/id_rsa.pub | ssh dewet@"$1" 'mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
+  cat ~/.ssh/id_rsa.pub | ssh "$1"@"$2" 'mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
 }
 
 ###### GitLab
@@ -176,8 +177,8 @@ function rsync-gitlab() {
   for var in "$@"
   do
     vmhostname "$var"
-    rsync ~/omnibus-packages/gitlab-* root@"$var":~
-    rsync ~/dotfiles/install-gitlab.sh root@"$var":~
+    rsync -hguavrP ~/omnibus-packages/gitlab-* root@"$var":~
+    rsync -hguavrP ~/dotfiles/install-gitlab.sh root@"$var":~
   done
 }
 
