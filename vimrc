@@ -101,7 +101,7 @@ endfunction
 map <leader>n :call RenameFile()<c
 let g:hardtime_default_on = 1
 let g:hardtime_allow_different_key = 1
-let g:hardtime_maxcount = 2
+let g:hardtime_maxcount = 3
 let g:hardtime_timeout = 2000
 
 autocmd Filetype markdown setlocal sts=3 sw=3

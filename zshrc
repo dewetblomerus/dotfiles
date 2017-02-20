@@ -15,6 +15,8 @@ source $ZSH/oh-my-zsh.sh
 ####### PATH
 
 # Kitchen Sink
+export PGDATA='/usr/local/var/postgres'
+export PGHOST='localhost'
 
 export PATH="~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
