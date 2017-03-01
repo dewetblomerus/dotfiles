@@ -101,12 +101,6 @@ function dodelete() {
 
 ###### Docker
 
-alias deval="eval $(docker-machine env tlab)"
-
-function dcon() {
-  eval "$(docker-machine env $1)"
-}
-
 function dmcreate() {
   docker-machine create \
     --vmwarefusion-cpu-count 4 \
@@ -116,12 +110,16 @@ function dmcreate() {
 }
 
 function drun() {
-  docker run --detach \
-    --env GITLAB_OMNIBUS_CONFIG="external_url http://'$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222;" \
+  docker run -it \
+    --env GITLAB_OMNIBUS_CONFIG="external_url 'http://$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222;" \
     --hostname "$1"\
-    -p 80:80 -p 2222:22 \
+    -p 80:80 -p 2222:22 -p 443:443\
     --name "$1" \
     gitlab/gitlab-ee:"$2"
+}
+
+function eetags() {
+  wget -q https://registry.hub.docker.com/v1/repositories/gitlab/gitlab-ee/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'
 }
 
 ###### VMware Fusion
@@ -187,3 +185,14 @@ function rsync-gitlab() {
 function mirror-rsync() {
   rsync -hguavrP root@mirror:/var/spool/apt-mirror/mirror/packages.gitlab.com/gitlab/gitlab-ee/ubuntu/pool/xenial/main/g/gitlab-ee/ ~/omnibus-packages/ee/
 }
+
+###### SSL
+# Created from https://devcenter.heroku.com/articles/ssl-certificate-self
+function sslgen() {
+  openssl genrsa -des3 -passout pass:x -out "$1".pass.key 2048
+  openssl rsa -passin pass:x -in "$1".pass.key -out "$1".key
+  rm "$1".pass.key
+  openssl req -new -key "$1".key -out "$1".csr
+  openssl x509 -req -sha256 -days 365 -in "$1".csr -signkey "$1".key -out "$1".crt
+}
+
