@@ -1,0 +1,24 @@
+image: docker:latest
+
+# When using dind, it's wise to use the overlayfs driver for
+# improved performance.
+variables:
+  DOCKER_DRIVER: overlay
+
+services:
+- docker:dind
+
+before_script:
+- docker info
+
+build:
+  stage: build
+  script:
+  - echo "where am I"
+  - ls
+  - echo "logging in"
+  - time docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+  - echo "building the image"
+  - time docker build -t registry.gitlab.com/dewetblomerus/dev-tools:latest .
+  - echo "pushing the image"
+  - time docker push registry.gitlab.com/dewetblomerus/dev-tools:latest
