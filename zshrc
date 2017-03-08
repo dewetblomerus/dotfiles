@@ -93,12 +93,17 @@ function docreate() {
   doctl compute droplet create "$1" --size 4gb --image docker-16-04 --region lon1 --ssh-keys 6d:dc:b6:ad:c4:9e:f5:a0:01:c7:d9:41:0e:b1:e9:44
 }
 
-alias drops="doctl compute d list | grep dewet"
+alias drops="doctl compute d list"
 
 function dodelete() {
   doctl compute d delete "$1"
 }
 
+alias doip="doctl compute floating-ip list"
+
+alias doipassign="doctl compute fipa assign 67.207.71.225 41459818"
+
+alias dodev="doctl compute d create dev --size 4gb --image 23285261 --region lon1 --ssh-keys 6d:dc:b6:ad:c4:9e:f5:a0:01:c7:d9:41:0e:b1:e9:44"
 ###### Docker
 
 function dmcreate() {
@@ -110,10 +115,10 @@ function dmcreate() {
 }
 
 function drun() {
-  docker run -it \
+  docker run -d \
     --env GITLAB_OMNIBUS_CONFIG="external_url 'http://$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222;" \
     --hostname "$1"\
-    -p 80:80 -p 2222:22 -p 443:443\
+    -p 80:80 -p 2222:22 -p 443:443 -p 5000:5000\
     --name "$1" \
     gitlab/gitlab-ee:"$2"
 }
