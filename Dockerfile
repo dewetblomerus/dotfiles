@@ -10,7 +10,7 @@ USER dewet
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 USER root
 USER dewet
-RUN rm .zshrc .vimrc .gitconfig
+RUN rm .zshrc
 ADD zshrc .zshrc
 ADD vimrc .vimrc
 ADD gitconfig .gitconfig
