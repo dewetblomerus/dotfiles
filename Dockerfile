@@ -25,4 +25,5 @@ ADD zshrc .zshrc
 ADD vimrc .vimrc
 ADD gitconfig .gitconfig
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+RUN vim -c 'PluginInstall' -c 'qa!'
 CMD /usr/bin/zsh
