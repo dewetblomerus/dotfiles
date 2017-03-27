@@ -9,6 +9,7 @@ RUN apt update
 RUN apt upgrade -y
 RUN apt install vim-nox zsh git-core -y
 RUN apt install wget -y
+RUN apt-get install docker.io -y
 RUN apt-get -y install software-properties-common && \
     add-apt-repository ppa:tmate.io/archive    && \
     apt-get -y update                             && \
