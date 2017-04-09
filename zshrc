@@ -18,16 +18,13 @@ source $ZSH/oh-my-zsh.sh
 export PGDATA='/usr/local/var/postgres'
 export PGHOST='localhost'
 
-export PATH="~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin"
 
+export GOPATH='/Users/dewet/code/go'
 #rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-export PATH=~/bin:$PATH #exercism.io needed this
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -114,17 +111,28 @@ function dmcreate() {
     --driver vmwarefusion "$1"
 }
 
-function drun() {
+function labrun() {
   docker run -d \
-    --env GITLAB_OMNIBUS_CONFIG="external_url 'http://$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222;" \
-    --hostname "$1"\
-    -p 80:80 -p 2222:22 -p 443:443 -p 5000:5000\
+    --env GITLAB_OMNIBUS_CONFIG="external_url 'http://$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222; registry_external_url 'http://$1:5000';" \
+    --hostname "$1" \
+    -v ~/code/certs:/etc/gitlab/ssl \
+    -p 80:80 -p 2222:22 -p 443:443 -p 5000:5000 \
     --name "$1" \
     gitlab/gitlab-ee:"$2"
 }
 
 function eetags() {
   wget -q https://registry.hub.docker.com/v1/repositories/gitlab/gitlab-ee/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'
+}
+
+function dnuke() {
+  docker rm -f $(docker ps -a -q)
+}
+
+alias dc="docker-compose"
+
+function dexec() {
+  docker exec -it $1 bash
 }
 
 ###### VMware Fusion
@@ -155,6 +163,7 @@ function vmcreate() {
   done
   ruby ~/dotfiles/vmdhcp.rb
   vmstart "$@"
+  echo "vmhostname next?"
 }
 
 ###### SSH
@@ -165,6 +174,7 @@ function vmhostname() {
     ssh root@"$var" sed -i "s/ubuntu/"$var"/g" /etc/hosts
     ssh root@"$var" sed -i "s/ubuntu/"$var"/g" /etc/hostname
     ssh root@"$var" hostname "$var"
+    echo "rsync-gitlab next?"
   done
 }
 
@@ -174,6 +184,10 @@ function down() {
 
 function addkey() {
   cat ~/.ssh/id_rsa.pub | ssh "$1"@"$2" 'mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
+}
+
+function catkey() {
+  cat ~/.ssh/id_rsa.pub
 }
 
 ###### GitLab
@@ -201,3 +215,8 @@ function sslgen() {
   openssl x509 -req -sha256 -days 365 -in "$1".csr -signkey "$1".key -out "$1".crt
 }
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dewet/bin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/dewet/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
