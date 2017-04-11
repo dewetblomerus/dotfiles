@@ -17,8 +17,8 @@ build:
   - echo "where am I"
   - ls
   - echo "logging in"
-  - time docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
   - echo "building the image"
-  - time docker build -t registry.gitlab.com/dewetblomerus/dotfiles:latest .
+  - docker build -t registry.gitlab.com/dewetblomerus/dotfiles:latest .
   - echo "pushing the image"
-  - time docker push registry.gitlab.com/dewetblomerus/dotfiles:latest
+  - docker push registry.gitlab.com/dewetblomerus/dotfiles:latest
