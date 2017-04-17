@@ -174,8 +174,8 @@ function vmhostname() {
     ssh root@"$var" sed -i "s/ubuntu/"$var"/g" /etc/hosts
     ssh root@"$var" sed -i "s/ubuntu/"$var"/g" /etc/hostname
     ssh root@"$var" hostname "$var"
-    echo "rsync-gitlab next?"
   done
+  echo "rsync-gitlab next?"
 }
 
 function down() {
