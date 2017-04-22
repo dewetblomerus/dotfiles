@@ -67,6 +67,7 @@ alias cirun="gitlab-ci-multi-runner"
 alias dm="docker-machine"
 alias password="~/code/ruby/keep-talking/password.rb"
 alias code="cd ~/code"
+#alias docker="sudo docker"
 
 ###### Git
 
