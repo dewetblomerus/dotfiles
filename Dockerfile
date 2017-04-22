@@ -1,13 +1,12 @@
 FROM ubuntu:16.04
-# Set the locale
+RUN apt update
+RUN apt upgrade -y
+RUN apt install vim-nox zsh git-core locales -y
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-RUN apt update
-RUN apt upgrade -y
-RUN apt install vim-nox zsh git-core -y
 RUN apt install wget -y
 RUN apt-get install docker.io -y
 RUN apt-get -y install software-properties-common && \
