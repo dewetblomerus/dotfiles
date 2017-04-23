@@ -1,0 +1,31 @@
+function dmcreate() {
+  docker-machine create \
+    --vmwarefusion-cpu-count 4 \
+    --vmwarefusion-memory-size 2400 \
+    --vmwarefusion-disk-size 30000 \
+    --driver vmwarefusion "$1"
+}
+
+function labrun() {
+  docker run -d \
+    --env GITLAB_OMNIBUS_CONFIG="external_url 'http://$1'; gitlab_rails['gitlab_shell_ssh_port'] = 2222; registry_external_url 'http://$1:5000';" \
+    --hostname "$1" \
+    -v ~/code/certs:/etc/gitlab/ssl \
+    -p 80:80 -p 2222:22 -p 443:443 -p 5000:5000 \
+    --name "$1" \
+    gitlab/gitlab-ee:"$2"
+}
+
+function eetags() {
+  wget -q https://registry.hub.docker.com/v1/repositories/gitlab/gitlab-ee/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'
+}
+
+function dnuke() {
+  docker rm -f $(docker ps -a -q)
+}
+
+alias dc="docker-compose"
+
+function dexec() {
+  docker exec -it $1 bash
+}

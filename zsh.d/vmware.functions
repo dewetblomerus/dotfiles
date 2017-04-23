@@ -1,0 +1,44 @@
+# Vmware Fusion
+alias vmdhcp=#"cat /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf"
+alias vmdhcp="ruby ~/dotfiles/vmdhcp.rb"
+
+alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun" #I could not get the Libarary folder to properly add to the path
+
+function vmstart() {
+  for var in "$@"
+  do
+    vmrun start ~/vm/"$var".vmwarevm nogui
+  done
+}
+
+function vmstop() {
+  for var in "$@"
+  do
+    vmrun stop ~/vm/"$var".vmwarevm
+  done
+}
+
+function vmcreate() {
+  for var in "$@"
+  do
+    vmrun clone ~/vm/ubuntu.vmwarevm/ubuntu.vmx ~/vm/"$var".vmwarevm/"$var".vmx linked -cloneName="$var"
+  done
+  ruby ~/dotfiles/vmdhcp.rb
+  vmstart "$@"
+  echo "vmhostname next?"
+}
+
+###### GitLab
+
+function rsync-gitlab() {
+  for var in "$@"
+  do
+    vmhostname "$var"
+    rsync -hguavrP ~/omnibus-packages/gitlab-* root@"$var":~
+    rsync -hguavrP ~/dotfiles/install-gitlab.sh root@"$var":~
+  done
+}
+
+function mirror-rsync() {
+  rsync -hguavrP root@mirror:/var/spool/apt-mirror/mirror/packages.gitlab.com/gitlab/gitlab-ee/ubuntu/pool/xenial/main/g/gitlab-ee/ ~/omnibus-packages/ee/
+}

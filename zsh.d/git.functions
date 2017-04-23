@@ -1,0 +1,15 @@
+###### Git
+
+function lazypush() {
+    git add -A
+    git commit -a -m "$1"
+    git push
+}
+
+function lazyamend() {
+  git stash
+  git rebase master
+  git stash pop
+  git add -A
+  git commit --amend
+}
