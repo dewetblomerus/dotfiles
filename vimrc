@@ -15,9 +15,6 @@ call vundle#begin()
   Plugin 'airblade/vim-gitgutter'
   Plugin 'elixir-lang/vim-elixir'
   Bundle 'csexton/trailertrash.vim'
-  Plugin 'kchmck/vim-coffee-script'
-  Bundle 'lukaszkorecki/CoffeeTags'
-  Bundle 'slim-template/vim-slim.git'
   Bundle "pangloss/vim-javascript"
   Bundle 'scrooloose/syntastic'
   Bundle 'scrooloose/nerdtree'
