@@ -23,12 +23,14 @@ RUN chsh -s `which zsh`
 USER dewet
 RUN rm .zshrc
 ADD zshrc .zshrc
+ADD zsh.d .zsh.d
 ADD vimrc .vimrc
 ADD gitconfig .gitconfig
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN vim -c 'PluginInstall' -c 'qa!'
 # Run docker command without Sudo
 USER root
+RUN rm .zsh.d/local.vars
 RUN groupmod -g 999 docker
 RUN gpasswd -a dewet docker
 RUN echo "dewet:;lkjasdf" | chpasswd
