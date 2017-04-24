@@ -2,7 +2,9 @@ FROM ubuntu:16.04
 # Basics
 RUN apt update
 RUN apt upgrade -y
-RUN apt install vim-nox zsh git-core locales sudo wget docker.io -y
+RUN apt install vim-nox zsh git-core locales sudo wget docker.io curl -y
+RUN curl -L https://github.com/docker/compose/releases/download/1.12.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+RUN sudo chmod +x /usr/local/bin/docker-compose
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
