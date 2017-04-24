@@ -28,6 +28,7 @@ ADD vimrc .vimrc
 ADD gitconfig .gitconfig
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 RUN vim -c 'PluginInstall' -c 'qa!'
+ADD known_hosts .ssh/known_hosts
 # Run docker command without Sudo
 USER root
 RUN rm .zsh.d/local.vars
