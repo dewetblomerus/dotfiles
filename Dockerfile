@@ -39,4 +39,5 @@ RUN gpasswd -a dewet docker
 RUN echo "dewet:;lkjasdf" | chpasswd
 RUN adduser dewet sudo
 USER dewet
+WORKDIR /home/dewet/code
 CMD /usr/bin/zsh
