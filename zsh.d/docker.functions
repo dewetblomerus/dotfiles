@@ -20,8 +20,13 @@ function eetags() {
   wget -q https://registry.hub.docker.com/v1/repositories/gitlab/gitlab-ee/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'
 }
 
+function dclear() {
+  docker rm -f $(docker ps -a -q)
+}
+
 function dnuke() {
   docker rm -f $(docker ps -a -q)
+  docker rmi -f $(docker images -q)
 }
 
 alias dc="docker-compose"
