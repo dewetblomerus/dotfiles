@@ -5,11 +5,12 @@ function lazypush() {
 }
 
 function lazyamend() {
-  git stash
-  git rebase master
-  git stash pop
   git add -A
   git commit --amend
+}
+
+function gfile() {
+  git diff-tree --no-commit-id --name-only -r "$1"
 }
 
 alias gits="git status"

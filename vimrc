@@ -14,6 +14,7 @@ call vundle#begin()
   Plugin 'bling/vim-airline'
   Plugin 'airblade/vim-gitgutter'
   Plugin 'elixir-lang/vim-elixir'
+  Plugin 'leafgarland/typescript-vim'
   Bundle 'csexton/trailertrash.vim'
   Bundle "pangloss/vim-javascript"
   Bundle 'scrooloose/syntastic'
