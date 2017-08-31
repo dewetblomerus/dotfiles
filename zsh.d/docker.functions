@@ -31,9 +31,9 @@ function dexec() {
 }
 
 function qabuild() {
-  docker build . -t registry.qasalesloft.com/tracer-bullet:$(git rev-parse my-branch)
+  docker build . -t registry.qasalesloft.com/tracer-bullet:$(git rev-parse HEAD)
 }
 
 function qapush() {
-  docker push registry.qasalesloft.com/tracer-bullet:$(git rev-parse my-branch)
+  docker push registry.qasalesloft.com/tracer-bullet:$(git rev-parse HEAD)
 }
