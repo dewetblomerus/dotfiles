@@ -29,3 +29,11 @@ alias dc="docker-compose"
 function dexec() {
   docker exec -it $1 bash
 }
+
+function qabuild() {
+  docker build . -t registry.qasalesloft.com/tracer-bullet:$(git rev-parse my-branch)
+}
+
+function qapush() {
+  docker push registry.qasalesloft.com/tracer-bullet:$(git rev-parse my-branch)
+}
