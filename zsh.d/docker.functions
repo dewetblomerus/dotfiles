@@ -37,3 +37,13 @@ function qabuild() {
 function qapush() {
   docker push registry.qasalesloft.com/tracer-bullet:$(git rev-parse HEAD)
 }
+
+function qaimage() {
+  docker build . -t registry.qasalesloft.com/$(basename `pwd`):$(git rev-parse HEAD)
+  docker push registry.qasalesloft.com/$(basename `pwd`):$(git rev-parse HEAD)
+}
+
+function qadeploy() {
+  sed -i '' -e "s/registry.qasalesloft.*$/registry.qasalesloft.com\/$(basename `pwd`):$1/g" deployment.yml
+  kubectl apply -f deployment.yml
+}
