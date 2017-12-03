@@ -54,3 +54,8 @@ function qadeploy() {
   sed -i '' -e "s/registry.qasalesloft.*$/registry.qasalesloft.com\/$(basename `pwd`):$(git rev-parse HEAD)/g" $HOME/src/k8s-services-config-qa/$(basename `pwd`)/deployment.yml
   kubectl apply -f $HOME/src/k8s-services-config-qa/$(basename `pwd`)/deployment.yml
 }
+
+function udemy-dl() {
+  source ~/dotfiles/.env
+  docker run -it --rm -v $(pwd)/$1:/download imwithye/udemy-dl -u $UDEMY_USERNAME -p $UDEMY_PASSWORD https://www.udemy.com/$1 -o "/download"
+}
