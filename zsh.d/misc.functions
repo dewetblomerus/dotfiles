@@ -36,4 +36,14 @@ function sslgen() {
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/dewet/bin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/dewet/bin/google-cloud-sdk/path.zsh.inc'; fi
 
-# There was a way to enable shell command completion for gcloud.
+###### Rails
+
+function migrate() {
+  bin/rails db:migrate
+  bin/rails db:migrate RAILS_ENV=test
+}
+
+function rollback() {
+  bin/rails db:rollback
+  bin/rails db:rollback RAILS_ENV=test
+}

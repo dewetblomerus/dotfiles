@@ -20,6 +20,10 @@ function eetags() {
   wget -q https://registry.hub.docker.com/v1/repositories/gitlab/gitlab-ee/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'
 }
 
+function dockertags() {
+  wget -q https://registry.hub.docker.com/v1/repositories/$1/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'
+}
+
 function dclear() {
   docker rm -f $(docker ps -a -q)
 }
