@@ -4,7 +4,7 @@
     br = branch
 	add-commit = !git add -A && git commit
 [user]
-	email = dewet@gitlab.com
+	email = dewet@blomerus.org
 	name = De Wet Blomerus
 [push]
 	default = current
