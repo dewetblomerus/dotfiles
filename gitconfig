@@ -10,7 +10,7 @@
 	default = current
 [core]
 	editor = vim
-	excludesfile = /Users/dewet/.gitignore_global
+	excludesfile = /Users/dewetblomerus/dotfiles/gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
