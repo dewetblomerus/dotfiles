@@ -14,10 +14,12 @@ function gfile() {
 }
 
 alias gits="git status"
-alias gitl="git log"
+alias gstatus="git status"
+alias glog="git log"
 alias gitb="git branch"
 alias gpush="git push"
 alias gpull="git pull"
 alias gdone="git checkout master && git pull && git fetch -p && git branch --merged | ggrep -Pv '\\*|master' | xargs -n 1 git branch -d"
 alias grhh="git reset --hard HEAD"
+alias gdiff="git diff"
 
