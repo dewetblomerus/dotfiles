@@ -22,4 +22,5 @@ alias gpull="git pull"
 alias gdone="git checkout master && git pull && git fetch -p && git branch --merged | ggrep -Pv '\\*|master' | xargs -n 1 git branch -d"
 alias grhh="git reset --hard HEAD"
 alias gdiff="git diff"
+alias wack="git checkout vendor/assets/javascripts/melody-webpack/SLApp.js"
 
