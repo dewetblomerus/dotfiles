@@ -13,14 +13,14 @@ function gfile() {
   git diff-tree --no-commit-id --name-only -r "$1"
 }
 
-alias gstatus="git status"
-alias glog="git log"
-alias gbranch="git branch"
+alias ga="git add"
+alias gs="git status"
+alias gl="git log"
 alias gb="git branch"
-alias gpush="git push"
-alias gpull="git pull"
+alias gps="git push"
+alias gpl="git pull"
 alias gdone="git checkout master && git pull && git fetch -p && git branch --merged | ggrep -Pv '\\*|master' | xargs -n 1 git branch -d"
 alias grhh="git reset --hard HEAD"
-alias gdiff="git diff"
+alias gd="git diff"
 alias wack="git checkout vendor/assets/javascripts/melody-webpack/SLApp.js"
 
