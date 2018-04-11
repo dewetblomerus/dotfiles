@@ -13,10 +13,10 @@ function gfile() {
   git diff-tree --no-commit-id --name-only -r "$1"
 }
 
-alias gits="git status"
 alias gstatus="git status"
 alias glog="git log"
-alias gitb="git branch"
+alias gbranch="git branch"
+alias gb="git branch"
 alias gpush="git push"
 alias gpull="git pull"
 alias gdone="git checkout master && git pull && git fetch -p && git branch --merged | ggrep -Pv '\\*|master' | xargs -n 1 git branch -d"
