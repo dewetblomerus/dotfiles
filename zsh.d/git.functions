@@ -5,7 +5,6 @@ function lazypush() {
 }
 
 function lazyamend() {
-  git add -A
   git commit --amend
 }
 
