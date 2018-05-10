@@ -35,5 +35,5 @@
   "prettier.proseWrap": "always",
   "editor.detectIndentation": false,
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 10,
+  "files.autoSaveDelay": 100,
 }
