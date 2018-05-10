@@ -47,3 +47,7 @@ function rollback() {
   bin/rails db:rollback
   bin/rails db:rollback RAILS_ENV=test
 }
+
+function grepdot() {
+  grep -R "$1" ~/dotfiles
+}
