@@ -1,27 +1,18 @@
 {
   "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": true
+    "suppressShowKeyBindingsNotice": true
   },
   "ActiveFileInStatusBar.fullpath": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoIndent": true,
   "editor.detectIndentation": false,
   "editor.fontSize": 16,
-  "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.formatOnType": true,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
+  "eslint.autoFixOnSave": false,
+  "eslint.enable": true,
   "explorer.confirmDelete": false,
   "extensions.ignoreRecommendations": false,
   "files.autoSave": "onFocusChange",
@@ -30,29 +21,12 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "gitlens.keymap": "chorded",
-  "jshint.config": ".jshintrc",
   "liveServer.settings.donotShowInfoMsg": true,
+  "prettier.arrowParens": "always",
+  "prettier.eslintIntegration": false,
   "prettier.proseWrap": "always",
   "terminal.integrated.fontSize": 16,
   "vim.autoindent": true,
   "window.zoomLevel": 1,
   "workbench.statusBar.feedback.visible": false,
-  "vim.statusBarColorControl": true,
-  "vim.statusBarColors": {
-    "normal": [
-      "#007acc",
-      "#ffffff"
-    ],
-    "insert": "#BF616A",
-    "visual": "#B48EAD",
-    "visualline": "#B48EAD",
-    "visualblock": "#A3BE8C",
-    "replace": "#D08770"
-  },
-  "workbench.colorCustomizations": {
-    "statusBar.background": "#007acc",
-    "statusBar.noFolderBackground": "#007acc",
-    "statusBar.debuggingBackground": "#007acc",
-    "statusBar.foreground": "#ffffff"
-  }
 }
