@@ -5,18 +5,9 @@
     "jest": true
   },
   "rules": {
-    "radix": 0,
-    "quotes": 0,
-    "indent": [
-      2,
-      2,
-      {
-        "SwitchCase": 1,
-        "VariableDeclarator": 1
-      }
-    ],
+    "no-unused-vars": 2,
     "no-tabs": 2,
-    "class-methods-use-this": 0,
+    "no-undef": 2,
     "linebreak-style": ["error", "unix"],
     "max-len": [2, 150],
     "no-use-before-define": [2, "nofunc"],
@@ -33,7 +24,5 @@
         "allow": ["tabId"]
       }
     ],
-    "import/prefer-default-export": 0,
-    "no-else-return": 0
   }
 }
