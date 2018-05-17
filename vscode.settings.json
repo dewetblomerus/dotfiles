@@ -6,8 +6,9 @@
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoIndent": true,
   "editor.detectIndentation": false,
-  "editor.fontSize": 16,
+  "editor.fontSize": 15,
   "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
@@ -27,5 +28,6 @@
   "terminal.integrated.fontSize": 16,
   "vim.autoindent": true,
   "window.zoomLevel": 1,
+  "workbench.activityBar.visible": false,
   "workbench.statusBar.feedback.visible": false,
 }
