@@ -8,7 +8,7 @@
     "no-unused-vars": 2,
     "no-tabs": 2,
     "no-undef": 2,
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": [2, "unix"],
     "max-len": [2, 150],
     "no-use-before-define": [2, "nofunc"],
     "arrow-parens": [2, "always"],
