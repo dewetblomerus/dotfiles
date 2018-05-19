@@ -20,6 +20,7 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "gitlens.historyExplorer.enabled": true,
   "gitlens.keymap": "chorded",
   "liveServer.settings.donotShowInfoMsg": true,
   "prettier.arrowParens": "always",
