@@ -20,5 +20,7 @@ if [ -d $HOME/.zsh.d ]; then
   done
 fi
 
+source $HOME/dotfiles/.env
+
 export NVM_DIR="/Users/dewetblomerus/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
