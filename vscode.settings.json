@@ -2,6 +2,10 @@
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "cSpell.words": [],
   "ActiveFileInStatusBar.fullpath": false,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoIndent": true,
@@ -20,7 +24,7 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "gitlens.historyExplorer.enabled": true,
+  "gitlens.historyExplorer.enabled": false,
   "gitlens.keymap": "chorded",
   "liveServer.settings.donotShowInfoMsg": true,
   "prettier.eslintIntegration": false,
@@ -32,4 +36,19 @@
   "workbench.activityBar.visible": false,
   "workbench.statusBar.feedback.visible": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.userWords": [
+    "automock",
+    "be",
+    "bugsnag",
+    "csrf",
+    "flowtype",
+    "precommit",
+    "proptypes",
+    "salesloft",
+    "systemvars",
+    "theming",
+    "to",
+    "truthy",
+    "upgrader"
+  ],
 }
