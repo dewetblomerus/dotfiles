@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="zsh.d bash_profile bashrc vimrc zshrc private scrotwm.conf Xresources railsrc gitconfig hyper.js eslintrc"    # list of files/folders to symlink in homedir
+files="nvmrc zsh.d bash_profile bashrc vimrc zshrc private scrotwm.conf Xresources railsrc gitconfig hyper.js eslintrc"    # list of files/folders to symlink in homedir
 
 ##########
 
