@@ -25,3 +25,6 @@ source $HOME/dotfiles/.env
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
 
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
