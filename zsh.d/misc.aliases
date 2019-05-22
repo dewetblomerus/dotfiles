@@ -1,4 +1,3 @@
-alias code="cd ~/code"
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias src="cd ~/src"
 alias dot="cd ~/dotfiles"
