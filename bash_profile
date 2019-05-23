@@ -6,3 +6,5 @@ parse_git_branch() {
 }
 
 export PS1="\e[0;36m\h\e[m:\e[0;32m\W\e[m\e[0;31m\$(parse_git_branch)\e[m\\$ "
+
+source /Users/dewet/.projectrc # SalesLoft Unbocksen setup.sh

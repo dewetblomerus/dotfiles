@@ -28,3 +28,5 @@ export NVM_DIR="$HOME/.nvm"
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+source /Users/dewet/.projectrc # SalesLoft Unbocksen setup.sh
