@@ -120,7 +120,7 @@ export PATH=~/bin:$PATH #exercism.io needed this
 
 alias fli='cd /home/dewet/ruby/flix'
 alias lan='cd ~/langana'
-alias pra='cd ~/ruby/study-resources/pragstudio-rails-ii-code/exercise-solutions' 
+alias pra='cd ~/ruby/study-resources/pragstudio-rails-ii-code/exercise-solutions'
 alias rub='cd ~/ruby'
 alias pin='ping 8.8.8.8'
 alias exe='cd ~/exercism/ruby'
@@ -131,7 +131,3 @@ alias dew='cd ~/dewetblomerus.github.io'
 # Load RVM into a shell session *as a function*
 
 export GOPATH=/home/dewet/code/go
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"

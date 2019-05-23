@@ -21,10 +21,6 @@ export PGHOST='localhost'
 export PATH="~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin"
 
 export GOPATH='/Users/dewet/code/go'
-#rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 export EDITOR='vim'
 
