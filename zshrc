@@ -22,11 +22,14 @@ fi
 
 source $HOME/dotfiles/.env
 
-export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
+#export NVM_DIR="$HOME/.nvm"
+#  . "/usr/local/opt/nvm/nvm.sh"
 
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
 source /Users/dewet/.projectrc # SalesLoft Unbocksen setup.sh
+
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
