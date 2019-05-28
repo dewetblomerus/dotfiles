@@ -1,8 +1,8 @@
+export AWSSH_ACCESS_KEY_ID=""
+export AWSSH_BASTION_HOST="omni1.salesloft.com"
+export AWSSH_SECRET_ACCESS_KEY=""
+export AWSSH_USERNAME="dblomerus"
+export PATH="$HOME/.kiex/bin:$PATH"
+export PATH=$PATH:~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/Users/dewetblomerus/src/awssh
 export PGDATA='/usr/local/var/postgres'
 export PGHOST='localhost'
-export PATH=$PATH:~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/Users/dewetblomerus/src/awssh
-export PATH="$HOME/.kiex/bin:$PATH"
-export AWSSH_BASTION_HOST="omni1.salesloft.com"
-export AWSSH_USERNAME="dblomerus"
-export AWSSH_ACCESS_KEY_ID=""
-export AWSSH_SECRET_ACCESS_KEY=""
