@@ -33,7 +33,7 @@ RUN vim -c 'PluginInstall' -c 'qa!'
 ADD known_hosts .ssh/known_hosts
 # Run docker command without Sudo
 USER root
-RUN rm .zsh.d/local.vars
+RUN rm .zsh.d/local.exports
 RUN groupmod -g 999 docker
 RUN gpasswd -a dewet docker
 RUN echo "dewet:;lkjasdf" | chpasswd
