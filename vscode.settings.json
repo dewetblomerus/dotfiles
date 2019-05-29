@@ -5,7 +5,7 @@
   "[json]": {
     "editor.formatOnSave": false
   },
-  "[yml]": {
+  "[yaml]": {
     "editor.formatOnSave": false
   },
   "ActiveFileInStatusBar.fullpath": false,
@@ -27,9 +27,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "flow.useNPMPackagedFlow": true,
-  "gitlens.historyExplorer.enabled": false,
   "gitlens.keymap": "chorded",
-  "liveServer.settings.donotShowInfoMsg": true,
   "prettier.eslintIntegration": false,
   "prettier.proseWrap": "always",
   "prettier.semi": false,
@@ -42,6 +40,7 @@
   "workbench.statusBar.feedback.visible": false,
   "cSpell.userWords": [
     "access",
+    "autoindent",
     "automock",
     "be",
     "blomerus",
@@ -57,8 +56,11 @@
     "dropdown",
     "enabled",
     "file",
+    "fira",
     "flowtype",
+    "fullpath",
     "gemfile",
+    "gitlens",
     "gmail",
     "guid",
     "httparty",
@@ -70,8 +72,10 @@
     "localdial",
     "lpdids",
     "marysol",
+    "menlo",
     "microservice",
     "mkdir",
+    "monospace",
     "move",
     "newrelic",
     "no",
@@ -126,18 +130,15 @@
   "editor.minimap.enabled": false,
   "workbench.settings.editor": "json",
   "sync.gist": "",
-  "sync.host": "",
-  "sync.pathPrefix": "",
   "sync.quietSync": false,
   "sync.askGistName": false,
   "sync.removeExtensions": true,
   "sync.syncExtensions": true,
   "sync.autoDownload": false,
   "sync.autoUpload": true,
-  "sync.lastUpload": "",
-  "sync.lastDownload": "",
   "sync.forceDownload": false,
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "liveServer.settings.donotShowInfoMsg": true
 }
