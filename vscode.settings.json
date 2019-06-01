@@ -8,7 +8,6 @@
   "[yaml]": {
     "editor.formatOnSave": false
   },
-  "ActiveFileInStatusBar.fullpath": false,
   "cSpell.words": [],
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoIndent": true,
@@ -95,6 +94,7 @@
     "realtime",
     "repo",
     "reselect",
+    "restangular",
     "rubocop",
     "salesloft",
     "salesloftlinks",
@@ -140,5 +140,6 @@
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+  "ActiveFileInStatusBar.fullpath": false
 }
