@@ -1,3 +1,4 @@
 .vscode
 .vs
-.tool-versions
+.elixir_ls
+.DS_Store
