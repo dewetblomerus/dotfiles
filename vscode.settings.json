@@ -47,6 +47,7 @@
     "bugsnag",
     "byebug",
     "cloneable",
+    "codeship",
     "csrf",
     "csvs",
     "dewet",
@@ -95,6 +96,7 @@
     "repo",
     "reselect",
     "restangular",
+    "rspec",
     "rubocop",
     "salesloft",
     "salesloftlinks",
@@ -141,5 +143,6 @@
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
   "liveServer.settings.donotShowInfoMsg": true,
-  "ActiveFileInStatusBar.fullpath": false
+  "ActiveFileInStatusBar.fullpath": false,
+  "ruby.format": "rubocop"
 }

@@ -30,6 +30,16 @@ function kubeshell() {
   fi
 }
 
+function ksp() {
+  if [ -z "$1" ]
+    then
+      echo "You must include a pod name as an argument"
+      return 1
+    else
+      kubectl exec -it $1 /bin/bash || kubectl exec -it $1 /bin/sh
+  fi
+}
+
 
 function kubeexec() {
   if [ -z "$1" ] || [ -z "$2" ]
