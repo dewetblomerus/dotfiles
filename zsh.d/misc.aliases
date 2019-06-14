@@ -6,6 +6,7 @@ alias fosback="foreman start --formation web=1,insecure=1,worker=1,scheduler=1,e
 alias fosnotweb="foreman start --formation web=0,insecure=1,worker=1,scheduler=1,event-dispatcher=1"
 alias fosweb="foreman start --formation web=1,insecure=0,worker=0,scheduler=0,event-dispatcher=0"
 alias gan="cd ~/src/gandalf"
+alias hea="cd ~/src/healer"
 alias jdraft="bundle exec jekyll draft"
 alias jes="bundle exec jekyll serve"
 alias jpost="bundle exec jekyll post"
