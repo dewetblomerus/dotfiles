@@ -34,3 +34,5 @@ source /Users/dewet/.projectrc # SalesLoft Unbocksen setup.sh
 
 source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
+unsetopt inc_append_history
+unsetopt share_history

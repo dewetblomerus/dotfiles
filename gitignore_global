@@ -2,3 +2,4 @@
 .vs
 .elixir_ls
 .DS_Store
+codeship.aes

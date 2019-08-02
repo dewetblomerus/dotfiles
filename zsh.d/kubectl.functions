@@ -1,9 +1,9 @@
 function qadeploy() {
   docker build . -t registry.qasalesloft.com/$(basename `pwd`):$(git branch | grep \* | cut -d ' ' -f2)
   docker push registry.qasalesloft.com/$(basename `pwd`):$(git branch | grep \* | cut -d ' ' -f2)
-  sed -i '' -e "s/registry.qasalesloft.*$/registry.qasalesloft.com\/$(basename `pwd`):$(git branch | grep \* | cut -d ' ' -f2)/g" $HOME/src/k8s-services-config-qa/$(basename `pwd`)/$(basename `pwd`)/deployment.yml
-  sed -i '' -e "s/registry.qasalesloft.*$/registry.qasalesloft.com\/$(basename `pwd`):$(git branch | grep \* | cut -d ' ' -f2)/g" $HOME/src/k8s-services-config-qa/$(basename `pwd`)/$(basename `pwd`)/deployment-web.yml
-  sed -i '' -e "s/registry.qasalesloft.*$/registry.qasalesloft.com\/$(basename `pwd`):$(git branch | grep \* | cut -d ' ' -f2)/g" $HOME/src/k8s-services-config-qa/$(basename `pwd`)/$(basename `pwd`)/deployment-worker.yml
+  sed -i '' -e "s/registry.qasalesloft.*$/registry.qasalesloft.com\/$(basename `pwd`):$(git branch | grep \* | cut -d ' ' -f2)/g" $HOME/src/k8s-services-config-qa/$(basename `pwd`)/deployment.yml
+  sed -i '' -e "s/registry.qasalesloft.*$/registry.qasalesloft.com\/$(basename `pwd`):$(git branch | grep \* | cut -d ' ' -f2)/g" $HOME/src/k8s-services-config-qa/$(basename `pwd`)/deployment-web.yml
+  sed -i '' -e "s/registry.qasalesloft.*$/registry.qasalesloft.com\/$(basename `pwd`):$(git branch | grep \* | cut -d ' ' -f2)/g" $HOME/src/k8s-services-config-qa/$(basename `pwd`)/deployment-worker.yml
   kubectl apply -f $HOME/src/k8s-services-config-qa/$(basename `pwd`)/$(basename `pwd`)/deployment.yml
   kubectl apply -f $HOME/src/k8s-services-config-qa/$(basename `pwd`)/$(basename `pwd`)/deployment-web.yml
   kubectl apply -f $HOME/src/k8s-services-config-qa/$(basename `pwd`)/$(basename `pwd`)/deployment-worker.yml

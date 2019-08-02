@@ -149,5 +149,9 @@
   "editor.formatOnPaste": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "ActiveFileInStatusBar.fullpath": false,
-  "ruby.format": "rubocop"
+  "ruby.format": "rubocop",
+  "files.exclude": {
+    "**/.elixir_ls": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
