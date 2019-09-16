@@ -17,6 +17,7 @@
   "editor.glyphMargin": false,
   "editor.lineNumbers": "relative",
   "editor.tabSize": 2,
+  "javascript.validate.enable": false,
   "eslint.autoFixOnSave": false,
   "eslint.enable": true,
   "explorer.confirmDelete": false,
@@ -34,7 +35,6 @@
   "prettier.trailingComma": "es5",
   "terminal.integrated.fontSize": 16,
   "vim.autoindent": true,
-  "window.zoomLevel": 1,
   "workbench.activityBar.visible": false,
   "workbench.statusBar.feedback.visible": false,
   "cSpell.userWords": [
@@ -153,5 +153,6 @@
   "files.exclude": {
     "**/.elixir_ls": true
   },
-  "javascript.updateImportsOnFileMove.enabled": "always"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1
 }
