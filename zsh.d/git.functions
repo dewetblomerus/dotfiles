@@ -12,7 +12,6 @@ function gfile() {
   git diff-tree --no-commit-id --name-only -r "$1"
 }
 
-
 alias gad="git add"
 alias gbr="git branch"
 alias gdi="git diff"
