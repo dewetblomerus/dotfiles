@@ -36,3 +36,7 @@ source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 unsetopt inc_append_history
 unsetopt share_history
+
+ssh-add -K ~/.ssh/id_rsa
+/usr/local/bin/keychain $HOME/.ssh/id_rsa
+source $HOME/.keychain/dewetmac-sh
