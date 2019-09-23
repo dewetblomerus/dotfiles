@@ -45,13 +45,7 @@ module.exports = {
     },
   },
 
-  plugins: [
-    'hyper-material-theme',
-    'hyperpower',
-    'hyper-search',
-    'hypercwd',
-    'hyperterm-tabs',
-  ],
+  plugins: ['hyper-search', 'hypercwd', 'hyperterm-tabs'],
 
   localPlugins: [],
   keymaps: {},
