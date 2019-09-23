@@ -75,37 +75,6 @@ function dexec() {
   docker exec -it $1 bash
 }
 
-###### VMware Fusion
-
-alias vmdhcp=#"cat /Library/Preferences/VMware\ Fusion/vmnet8/dhcpd.conf"
-alias vmdhcp="ruby ~/dotfiles/vmdhcp.rb"
-
-alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun" #I could not get the Libarary folder to properly add to the path
-
-function vmstart() {
-  for var in "$@"
-  do
-    vmrun start ~/vm/"$var".vmwarevm nogui
-  done
-}
-
-function vmstop() {
-  for var in "$@"
-  do
-    vmrun stop ~/vm/"$var".vmwarevm
-  done
-}
-
-function vmcreate() {
-  for var in "$@"
-  do
-    vmrun clone ~/vm/ubuntu.vmwarevm/ubuntu.vmx ~/vm/"$var".vmwarevm/"$var".vmx linked -cloneName="$var"
-  done
-  ruby ~/dotfiles/vmdhcp.rb
-  vmstart "$@"
-  echo "vmhostname next?"
-}
-
 ###### SSH
 
 function vmhostname() {
@@ -130,25 +99,10 @@ function catkey() {
   cat ~/.ssh/id_rsa.pub
 }
 
-###### GitLab
-
-function rsync-gitlab() {
-  for var in "$@"
-  do
-    vmhostname "$var"
-    rsync -hguavrP ~/omnibus-packages/gitlab-* root@"$var":~
-    rsync -hguavrP ~/dotfiles/install-gitlab.sh root@"$var":~
-  done
-}
-
-function mirror-rsync() {
-  rsync -hguavrP root@mirror:/var/spool/apt-mirror/mirror/packages.gitlab.com/gitlab/gitlab-ee/ubuntu/pool/xenial/main/g/gitlab-ee/ ~/omnibus-packages/ee/
-}
-
 ###### SSL
 # Created from https://devcenter.heroku.com/articles/ssl-certificate-self
 function sslgen() {
-  openssl genrsa -des3 -passout pass:x -out "$1".pass.key 2048
+  openssl genrsa -des3 -passout pass:x -out "$1".pass.key 4096
   openssl rsa -passin pass:x -in "$1".pass.key -out "$1".key
   rm "$1".pass.key
   openssl req -new -key "$1".key -out "$1".csr
