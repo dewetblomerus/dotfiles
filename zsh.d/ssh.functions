@@ -1,0 +1,21 @@
+function down() {
+  ssh -t "$1" sudo init 0
+}
+
+function addkey() {
+  cat ~/.ssh/id_rsa.pub | ssh "$1"@"$2" 'mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys'
+}
+
+function catkey() {
+  cat ~/.ssh/id_rsa.pub
+}
+
+###### SSL
+# Created from https://devcenter.heroku.com/articles/ssl-certificate-self
+function sslgen() {
+  openssl genrsa -des3 -passout pass:x -out "$1".pass.key 4096
+  openssl rsa -passin pass:x -in "$1".pass.key -out "$1".key
+  rm "$1".pass.key
+  openssl req -new -key "$1".key -out "$1".csr
+  openssl x509 -req -sha256 -days 365 -in "$1".csr -signkey "$1".key -out "$1".crt
+}

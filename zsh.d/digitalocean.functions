@@ -5,13 +5,3 @@ function docreate() {
 }
 
 alias drops="doctl compute d list"
-
-function dodelete() {
-  doctl compute d delete "$1"
-}
-
-alias doip="doctl compute floating-ip list"
-
-alias doipassign="doctl compute fipa assign 67.207.71.225 41459818"
-
-alias dodev="doctl compute d create dev --size 4gb --image 23285261 --region lon1 --ssh-keys 6d:dc:b6:ad:c4:9e:f5:a0:01:c7:d9:41:0e:b1:e9:44"
