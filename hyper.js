@@ -4,11 +4,15 @@ module.exports = {
     bell: 'SOUND',
     borderColor: '#333',
     copyOnSelect: true,
-    css: '',
+    css: `
+      .tab_active {
+        background-color: #303030;
+      }
+    `,
     cursorAccentColor: '#000',
     cursorBlink: true,
     cursorColor: 'rgba(248,28,229,0.8)',
-    cursorShape: 'BEAM',
+    cursorShape: 'BLOCK',
     defaultSSHApp: true,
     env: {},
     fontSize: 18,
