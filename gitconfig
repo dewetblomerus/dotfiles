@@ -1,8 +1,11 @@
 [alias]
-    co = checkout
-    cm = commit
-    br = branch
+  co = checkout
+  cm = commit
+  br = branch
 	add-commit = !git add -A && git commit
+  set-upstream = \
+    !git branch \
+    --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [user]
 	email = dewet@blomerus.org
 	name = De Wet Blomerus
