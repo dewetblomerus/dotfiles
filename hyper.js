@@ -20,6 +20,7 @@ module.exports = {
     fontWeightBold: 'bold',
     foregroundColor: '#fff',
     padding: '12px 14px',
+    scrollback: 10000,
     selectionColor: 'rgba(248,28,229,0.3)',
     shell: '',
     shellArgs: ['--login'],
