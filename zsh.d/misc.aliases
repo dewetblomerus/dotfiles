@@ -1,4 +1,3 @@
-
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias dew='cd ~/dewetblomerus.github.io'
 alias dm="docker-machine"
@@ -30,11 +29,12 @@ alias omni="ssh -A dblomerus@omni1.salesloft.com"
 alias password="~/code/ruby/keep-talking/password.rb"
 alias pin='ping 8.8.8.8'
 alias pin="ping yomurafiber.com"
+alias reg="cd ~/src/regional_api_gateway"
 alias rename="elixir ~/code/elixir/rename-receipts/rename_receipts.exs"
 alias rha="cd ~/src/rhapsody"
 alias rof="bin/rspec --only-failures"
-alias rsp="bin/rspec"
 alias rok="ngrok start --all"
+alias rsp="bin/rspec"
 alias rub='cd ~/ruby'
 alias scr="cd ~/Library/Application\ Support/screeps/scripts"
 alias scrblom="cd ~/Library/Application\ Support/screeps/scripts/blom___21025/default"
