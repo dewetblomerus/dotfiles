@@ -28,7 +28,6 @@
   "files.trimTrailingWhitespace": true,
   "flow.useNPMPackagedFlow": true,
   "gitlens.keymap": "chorded",
-  "prettier.eslintIntegration": false,
   "prettier.proseWrap": "always",
   "prettier.semi": false,
   "prettier.singleQuote": true,
@@ -38,6 +37,7 @@
   "workbench.activityBar.visible": false,
   "workbench.statusBar.feedback.visible": false,
   "cSpell.userWords": [
+    "Burnham",
     "access",
     "autoindent",
     "automock",
@@ -48,6 +48,7 @@
     "byebug",
     "cloneable",
     "codeship",
+    "combobox",
     "csrf",
     "csvs",
     "dewet",
@@ -55,6 +56,7 @@
     "dockerize",
     "dotenv",
     "dropdown",
+    "droppingly",
     "enabled",
     "file",
     "fira",
@@ -79,6 +81,7 @@
     "mkdir",
     "monospace",
     "move",
+    "multiline",
     "newrelic",
     "nginx",
     "no",
@@ -98,10 +101,12 @@
     "react",
     "realtime",
     "repo",
+    "repos",
     "reselect",
     "restangular",
     "rspec",
     "rubocop",
+    "ruboloft",
     "salesloft",
     "salesloftlinks",
     "salesloftmail",
@@ -149,10 +154,16 @@
   "editor.formatOnPaste": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "ActiveFileInStatusBar.fullpath": false,
-  "ruby.format": "rubocop",
   "files.exclude": {
-    "**/.elixir_ls": true
+    "**/.elixir_ls": true,
+    "dist": true,
+    "node_modules": true,
+    "package-lock.json": true
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "ruby.useLanguageServer": true,
+  "ruby.useBundler": true,
+  "ruby.pathToBundler": "/Users/dewet/.asdf/shims/bundler",
+  "git.enableSmartCommit": true
 }
