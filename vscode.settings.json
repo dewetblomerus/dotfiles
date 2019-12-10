@@ -12,7 +12,7 @@
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoIndent": true,
   "editor.detectIndentation": false,
-  "editor.fontSize": 15,
+  "editor.fontSize": 17,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.lineNumbers": "relative",
@@ -157,7 +157,7 @@
     "package-lock.json": true
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "ruby.useLanguageServer": true,
   "ruby.useBundler": true,
   "ruby.pathToBundler": "/Users/dewet/.asdf/shims/bundler",
