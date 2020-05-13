@@ -1,0 +1,6 @@
+###### SSH
+
+function rhycp() {
+  rm -rf ~/src/sidecar/react_app/node_modules/@rhythm/"$1"/build
+  cp -r ~/src/rhythm/self-contained/"$1"/build /Users/dewet/src/sidecar/react_app/node_modules/@rhythm/"$1"/
+}
