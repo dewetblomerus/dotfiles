@@ -1,4 +1,5 @@
 alias com="cd ~/code/gitlab/www-gitlab-com"
+alias dev="cd ~/src/dev-o-nomicon"
 alias dew='cd ~/dewetblomerus.github.io'
 alias dm="docker-machine"
 alias dot="cd ~/dotfiles"
@@ -46,4 +47,5 @@ alias scrspace="cd ~/Library/Application\ Support/screeps/scripts/screeps_space_
 alias sid="cd ~/src/sidecar"
 alias src="cd ~/src"
 alias swi="cd ~/src/switchboard"
+alias ten="cd ~/src/tenant_service"
 alias tra="cd ~/src/tracer-bullet"
