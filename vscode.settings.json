@@ -162,5 +162,6 @@
   "ruby.useLanguageServer": true,
   "ruby.useBundler": true,
   "ruby.pathToBundler": "/Users/dewet/.asdf/shims/bundler",
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "git.enableStatusBarSync": false
 }
