@@ -5,4 +5,3 @@ export PATH="$HOME/.kiex/bin:$PATH"
 export PATH=$PATH:~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/Users/dewetblomerus/src/awssh
 export PGDATA='/usr/local/var/postgres'
 export PGHOST='localhost'
-export SIDECAR_FAST_BUILD=1
