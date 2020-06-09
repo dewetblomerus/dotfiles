@@ -31,7 +31,6 @@
   "terminal.integrated.fontSize": 16,
   "vim.autoindent": true,
   "workbench.activityBar.visible": false,
-  "workbench.statusBar.feedback.visible": false,
   "cSpell.userWords": [
     "Burnham",
     "access",
@@ -140,7 +139,6 @@
   "workbench.settings.editor": "json",
   "sync.gist": "",
   "sync.quietSync": false,
-  "sync.askGistName": false,
   "sync.removeExtensions": true,
   "sync.syncExtensions": true,
   "sync.autoDownload": false,
@@ -149,7 +147,6 @@
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
-  "liveServer.settings.donotShowInfoMsg": true,
   "ActiveFileInStatusBar.fullpath": false,
   "files.exclude": {
     "**/.elixir_ls": true,
