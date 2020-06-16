@@ -4,6 +4,7 @@ alias dm="docker-machine"
 alias dot="cd ~/dotfiles"
 alias exe='cd ~/exercism/ruby'
 alias fos="foreman s"
+alias yrb="yarn run build && say done"
 alias gits='git status'
 alias jdraft="bundle exec jekyll draft"
 alias jes="bundle exec jekyll serve"
