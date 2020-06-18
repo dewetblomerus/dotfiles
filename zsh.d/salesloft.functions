@@ -4,3 +4,15 @@ function rhycp() {
   rm -rf ~/src/sidecar/react_app/node_modules/@rhythm/"$1"/build
   cp -r ~/src/rhythm/self-contained/"$1"/build /Users/dewet/src/sidecar/react_app/node_modules/@rhythm/"$1"/
 }
+
+function b() {
+  if [[ $PWD/ = */src/sidecar/* ]]; then
+    cd ~/src/sidecar
+    git checkout package.json
+    sed -i '' 's/\"build\": \"NODE_OPTIONS/\"build\": \"NODE_ENV=production NODE_OPTIONS/g' ~/src/sidecar/package.json
+    yarn run build
+    say done
+  else
+    echo 'This build script currently only works for Sidecar'
+  fi
+}
