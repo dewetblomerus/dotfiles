@@ -164,5 +164,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "turboConsoleLog.quote": "'"
 }
