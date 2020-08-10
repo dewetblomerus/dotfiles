@@ -12,7 +12,13 @@ function b() {
     sed -i '' 's/\"build\": \"NODE_OPTIONS/\"build\": \"NODE_ENV=production NODE_OPTIONS/g' ~/src/sidecar/package.json
     yarn run build
     say done
+  elif [[ $PWD/ = */src/rhythm/* ]]; then
+    cd ~/src/rhythm
+    npm install
+    rush update
+    rush rebuild
+    say done
   else
-    echo 'This build script currently only works for Sidecar'
+    echo 'This build script currently only works for Sidecar and Rhythm'
   fi
 }
