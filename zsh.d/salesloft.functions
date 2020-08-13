@@ -1,8 +1,17 @@
 ###### SSH
 
 function rhycp() {
+  rush rebuild --to @rhythm/"$1"
   rm -rf ~/src/sidecar/react_app/node_modules/@rhythm/"$1"/build
   cp -r ~/src/rhythm/self-contained/"$1"/build /Users/dewet/src/sidecar/react_app/node_modules/@rhythm/"$1"/
+  say done
+}
+
+function rhacp() {
+  rush rebuild --to @rhythm/"$1"
+  rm -rf ~/src/rhapsody/node_modules/@rhythm/"$1"/build
+  cp -r ~/src/rhythm/self-contained/"$1"/build /Users/dewet/src/rhapsody/node_modules/@rhythm/"$1"/
+  say done
 }
 
 function b() {
