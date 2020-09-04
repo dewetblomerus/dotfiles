@@ -3,7 +3,8 @@
     "suppressShowKeyBindingsNotice": true
   },
   "[json]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
     "editor.formatOnSave": false
@@ -17,6 +18,9 @@
   "editor.glyphMargin": false,
   "editor.lineNumbers": "relative",
   "editor.tabSize": 2,
+  "[python]": {
+    "editor.tabSize": 4
+  },
   "javascript.validate.enable": true,
   "eslint.autoFixOnSave": false,
   "eslint.enable": true,
@@ -44,6 +48,8 @@
     "cloneable",
     "codeship",
     "combobox",
+    "count",
+    "count vectorizer",
     "csrf",
     "csvs",
     "dewet",
@@ -84,6 +90,7 @@
     "normalizers",
     "normalizr",
     "npmrc",
+    "numpy",
     "observability",
     "okta",
     "on",
@@ -111,6 +118,7 @@
     "setstate",
     "sfdc",
     "sigstr",
+    "sklearn",
     "state",
     "subaccount",
     "systemvars",
@@ -127,6 +135,7 @@
     "untargeted",
     "update",
     "upgrader",
+    "vectorizer",
     "vidyard",
     "webmock",
     "workdir"
