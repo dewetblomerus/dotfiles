@@ -28,3 +28,4 @@ alias src="cd ~/src"
 alias swi="cd ~/src/switchboard"
 alias ten="cd ~/src/tenant_service"
 alias tra="cd ~/src/tracer-bullet"
+alias kf='kubectl exec -it `kubectl get pods | fzf | awk '\''{print $1}'\''` -- /bin/bash'
