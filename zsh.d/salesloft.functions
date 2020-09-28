@@ -1,10 +1,12 @@
 ###### SSH
 
 function rhycp() {
+  cd ~/src/rhythm
   rush rebuild --to @rhythm/"$1"
   rm -rf ~/src/sidecar/react_app/node_modules/@rhythm/"$1"/build
   cp -r ~/src/rhythm/self-contained/"$1"/build /Users/dewet/src/sidecar/react_app/node_modules/@rhythm/"$1"/
-  say done
+  cd ~/src/sidecar
+  b
 }
 
 function rhacp() {
