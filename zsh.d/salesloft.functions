@@ -25,6 +25,7 @@ function b() {
     say done
   elif [[ $PWD/ = */src/rhythm/* ]]; then
     cd ~/src/rhythm
+    git clean -xdf .
     npm install
     rush update
     rush rebuild
