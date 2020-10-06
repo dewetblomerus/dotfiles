@@ -134,6 +134,7 @@
     "tzdata",
     "unimpersonate",
     "unmount",
+    "unparse",
     "untargeted",
     "update",
     "upgrader",
