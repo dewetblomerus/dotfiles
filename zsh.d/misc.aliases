@@ -1,4 +1,5 @@
 alias cod="cd ~/code"
+alias dow="cd ~/Downloads"
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias dew='cd ~/dewetblomerus.github.io'
 alias dm="docker-machine"

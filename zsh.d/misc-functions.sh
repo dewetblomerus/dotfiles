@@ -1,3 +1,17 @@
+function ndow() {
+  cd ~/Downloads
+  if [[ $PWD/ = */Downloads/* ]]; then
+    echo 'Deleting everything in Downloads'
+    mkdir ../.tmp_to_remove
+    mv -- * ../.tmp_to_remove
+    rm -rf ../.tmp_to_remove &
+    say done
+  else
+    echo 'YOU ARE NOT IN DOWNLOADS'
+    say 'YOU ARE NOT IN DOWNLOADS'
+  fi
+}
+
 ###### SSH
 
 function vmhostname() {
