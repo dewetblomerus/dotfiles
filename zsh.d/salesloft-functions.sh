@@ -40,6 +40,6 @@ function b() {
     say done
     npm start
   else
-    echo 'This build script currently only works for Sidecar and Rhythm'
+    echo 'This build script currently only works for Rhapsody, Rhythm  and Sidecar'
   fi
 }
