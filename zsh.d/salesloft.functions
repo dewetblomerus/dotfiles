@@ -30,6 +30,15 @@ function b() {
     rush update
     rush rebuild
     say done
+  elif [[ $PWD/ = */src/rhapsody/* ]]; then
+    cd ~/src/rhapsody
+    mkdir ../.tmp_to_remove
+    mv node_modules ../.tmp_to_remove
+    mv build ../.tmp_to_remove
+    rm -rf ../.tmp_to_remove &
+    npm install
+    say done
+    npm start
   else
     echo 'This build script currently only works for Sidecar and Rhythm'
   fi
