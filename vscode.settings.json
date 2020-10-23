@@ -105,6 +105,7 @@
     "precommit",
     "prettierrc",
     "proptypes",
+    "pytest",
     "qasalesloft",
     "rbenv",
     "react",
