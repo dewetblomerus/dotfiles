@@ -1,3 +1,6 @@
+alias bun="DEPENDENCIES_NEXT=1 bundle"
+alias dn="DEPENDENCIES_NEXT=1"
+alias bunn="DEPENDENCIES_NEXT=1 bundle"
 alias cod="cd ~/code"
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias dew='cd ~/dewetblomerus.github.io'
@@ -24,6 +27,8 @@ alias rename="elixir ~/code/elixir/rename-receipts/rename_receipts.exs"
 alias rof="bundle exec rspec --only-failures"
 alias rok="ngrok start --all"
 alias rsp="bundle exec rspec"
+alias rsp="bundle exec rspec"
+alias rspn="DEPENDENCIES_NEXT=1 bundle exec rspec"
 alias rub='cd ~/ruby'
 alias scr="cd ~/Library/Application\ Support/screeps/scripts"
 alias scrblom="cd ~/Library/Application\ Support/screeps/scripts/blom___21025/default"
