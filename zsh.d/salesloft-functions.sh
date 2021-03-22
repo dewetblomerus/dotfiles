@@ -18,9 +18,8 @@ function b() {
     cd ~/src/sidecar
     echo "Setting package.json to production build"
     git checkout package.json
-    sed -i '' 's/\"build\": \"NODE_OPTIONS/\"build\": \"NODE_ENV=production NODE_OPTIONS/g' ~/src/sidecar/package.json
     echo "Running yarn run build"
-    yarn run build
+    NODE_ENV=production yarn run build
     say done
   elif [[ $PWD/ = */src/rhythm/* ]]; then
     cd ~/src/rhythm
