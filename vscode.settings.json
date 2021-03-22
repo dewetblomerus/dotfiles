@@ -162,7 +162,7 @@
   "gitlens.statusBar.enabled": false,
   "editor.minimap.enabled": false,
   "editor.overviewRulerBorder": false,
-  "editor.scrollbar.verticalScrollbarSize": 5,
+  "editor.scrollbar.verticalScrollbarSize": 10,
   "workbench.settings.editor": "json",
   "sync.gist": "",
   "sync.quietSync": false,
