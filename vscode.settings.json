@@ -182,7 +182,6 @@
     "package-lock.json": true
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "window.zoomLevel": 0,
   "ruby.useLanguageServer": true,
   "ruby.useBundler": true,
   "ruby.pathToBundler": "/Users/dewet/.asdf/shims/bundler",
@@ -192,5 +191,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.sideBar.location": "right",
-  "turboConsoleLog.quote": "'"
+  "turboConsoleLog.quote": "'",
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.scrollback": 5000
 }

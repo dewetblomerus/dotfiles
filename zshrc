@@ -40,3 +40,4 @@ unsetopt share_history
 ssh-add -K ~/.ssh/id_rsa
 /usr/local/bin/keychain $HOME/.ssh/id_rsa
 source $HOME/.keychain/dewetmac-sh
+eval "$(nodenv init -)"
