@@ -41,3 +41,5 @@ ssh-add -K ~/.ssh/id_rsa
 /usr/local/bin/keychain $HOME/.ssh/id_rsa
 source $HOME/.keychain/dewetmac-sh
 eval "$(nodenv init -)"
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
