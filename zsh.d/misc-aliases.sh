@@ -1,10 +1,11 @@
+
 alias bun="DEPENDENCIES_NEXT=1 bundle"
-alias dn="DEPENDENCIES_NEXT=1"
 alias bunn="DEPENDENCIES_NEXT=1 bundle"
 alias cod="cd ~/code"
 alias com="cd ~/code/gitlab/www-gitlab-com"
 alias dew='cd ~/dewetblomerus.github.io'
 alias dm="docker-machine"
+alias dn="DEPENDENCIES_NEXT=1"
 alias dot="cd ~/dotfiles"
 alias dow="cd ~/Downloads"
 alias exe='cd ~/exercism/ruby'
@@ -18,6 +19,7 @@ alias jpublish="bundle exec jekyll publish"
 alias js='bundle exec jekyll serve'
 alias junpublish="bundle exec jekyll unpublish"
 alias k="kubectl"
+alias kf="kubectl exec -it \`kubectl get pods | fzf | awk '{print \$1}'\` /bin/bash"
 alias lab="cd ~/code/gitlab"
 alias lay="cd ~/code/ergodox/ergodox-firmware/firmware/keyboard/ergodox/layout"
 alias password="~/code/ruby/keep-talking/password.rb"
