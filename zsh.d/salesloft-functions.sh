@@ -21,7 +21,7 @@ function b() {
     say done
   elif [[ $PWD/ = */src/rhythm/* ]]; then
     cd ~/src/rhythm
-    echo "Deleting everything that is not committed to Git"
+    echo "💣 Deleting everything that is not committed to Git"
     git clean -xdf .
     echo "running npm install"
     npm install

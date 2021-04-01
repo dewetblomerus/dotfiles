@@ -16,7 +16,7 @@ function kubeget() {
 function kubeshell() {
   if [ -z "$1" ]
     then
-      echo "You must include a service name as an argument"
+      echo "☠️ You must include a service name as an argument"
       return 1
     else
       POD=$(kubectl get pods | grep ${1}-[0-9] | grep Running | head -1 | awk {'print $1'})
