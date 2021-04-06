@@ -10,6 +10,7 @@ alias gan="cd ~/src/gandalf"
 alias hea="cd ~/src/healer"
 alias k8tra="cd ~/src/k8s-services-config-qa/tracer-bullet"
 alias kf='kubectl exec -it `kubectl get pods | fzf | awk '\''{print $1}'\''` -- /bin/bash'
+alias kfk="zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties & kafka-server-start /usr/local/etc/kafka/server.properties"
 alias kil="cd ~/src/kill-build-codeship"
 alias maw="cd ~/src/mawker"
 alias mba="cd ~/src/man-in-the-mirror-back"
