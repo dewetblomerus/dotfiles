@@ -43,3 +43,4 @@ source $HOME/.keychain/dewetmac-sh
 eval "$(nodenv init -)"
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
