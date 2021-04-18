@@ -5,6 +5,9 @@ function s() {
   elif [[ $PWD/ = */src/gandalf/* ]]; then
     cd ~/src/gandalf
     foreman s
+  elif [[ $PWD/ = */src/switchboard/* ]]; then
+    cd ~/src/switchboard
+    foreman s
   elif [[ $PWD/ = */src/rhapsody/* ]]; then
     cd ~/src/rhapsody
     npm start
