@@ -5,3 +5,6 @@ export PATH="$HOME/.kiex/bin:$PATH"
 export PATH=$PATH:~/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/go/bin:/Users/dewetblomerus/src/awssh
 export PGDATA='/usr/local/var/postgres'
 export PGHOST='localhost'
+export ELIXIR_EDITOR="sh /usr/local/bin/code"
+export ECTO_EDITOR=$ELIXIR_EDITOR
+export PLUG_EDITOR=$ELIXIR_EDITOR
