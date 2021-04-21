@@ -115,3 +115,7 @@ function rhycp() {
   cd ~/src/sidecar
   b
 }
+
+function kud() {
+  kustomize build deploy/manifests/qa/qa$1 | kubectl --context qa$1 apply -f -
+}
