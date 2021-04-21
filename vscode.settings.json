@@ -193,5 +193,6 @@
   "workbench.sideBar.location": "right",
   "turboConsoleLog.quote": "'",
   "editor.accessibilitySupport": "off",
-  "terminal.integrated.scrollback": 5000
+  "terminal.integrated.scrollback": 5000,
+  "terminal.integrated.copyOnSelection": true
 }
