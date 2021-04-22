@@ -1,0 +1,18 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "alt+cmd+c",
+    "command": "extension.ActiveFileInStatusBarClicked"
+  },
+  {
+    "key": "cmd+alt+u",
+    "command": "terminalCommandKeys.run",
+    "args": {
+      "cmd": "bundle exec rspec ${file}",
+      "newTerminal": false,
+      "saveAllFiles": true,
+      "showTerminal": true,
+      "focus": true
+    }
+  }
+]
