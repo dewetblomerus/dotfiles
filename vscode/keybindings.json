@@ -5,6 +5,10 @@
     "command": "extension.ActiveFileInStatusBarClicked"
   },
   {
+    "key": "cmd+alt+i",
+    "command": "extension.rerunLastCommand"
+  },
+  {
     "key": "cmd+alt+u",
     "command": "terminalCommandKeys.run",
     "when": "resourceExtname == .rb",
