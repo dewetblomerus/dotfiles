@@ -7,12 +7,23 @@
   {
     "key": "cmd+alt+u",
     "command": "terminalCommandKeys.run",
+    "when": "resourceExtname == .rb",
     "args": {
       "cmd": "bundle exec rspec ${file}",
       "newTerminal": false,
       "saveAllFiles": true,
       "showTerminal": true,
-      "focus": true
+      "focus": false
     }
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
   }
 ]
