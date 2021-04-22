@@ -194,5 +194,18 @@
   "turboConsoleLog.quote": "'",
   "editor.accessibilitySupport": "off",
   "terminal.integrated.scrollback": 5000,
-  "terminal.integrated.copyOnSelection": true
+  "terminal.integrated.copyOnSelection": true,
+  "elixirLS.suggestSpecs": false,
+  "elixirLS.dialyzerEnabled": true,
+  "elixirLS.signatureAfterComplete": false,
+  "elixirLS.fetchDeps": false,
+  "emmet.includeLanguages": {
+    "html-eex": "html",
+    "elixir": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.welcomePage.hiddenCategories": [
+    "Beginner",
+    "Setup"
+  ],
 }
