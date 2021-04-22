@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "alt+cmd+c",
@@ -6,7 +5,14 @@
   },
   {
     "key": "cmd+alt+i",
-    "command": "extension.rerunLastCommand"
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.files.save",
+        "extension.rerunLastCommand"
+      ]
+    },
+    "when": "editorTextFocus"
   },
   {
     "key": "cmd+alt+u",
