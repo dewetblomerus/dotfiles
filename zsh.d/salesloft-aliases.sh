@@ -37,5 +37,6 @@ alias sidreset="cd ~/src/sidecar && rm -rf node_modules && cd react_app && rm -r
 alias sl="~/src/iterm/sl.py"
 alias src="cd ~/src"
 alias swi="cd ~/src/switchboard"
+alias tem="cd ~/src/temple"
 alias ten="cd ~/src/tenant_service"
 alias tra="cd ~/src/tracer-bullet"
