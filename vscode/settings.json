@@ -9,6 +9,9 @@
   "[yaml]": {
     "editor.formatOnSave": false
   },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "cSpell.words": [],
   "editor.acceptSuggestionOnEnter": "off",
   "editor.autoIndent": true,

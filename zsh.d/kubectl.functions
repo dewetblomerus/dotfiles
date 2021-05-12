@@ -9,8 +9,12 @@ function qadeploy() {
   kubectl apply -f $HOME/src/k8s-services-config-qa/$(basename `pwd`)/$(basename `pwd`)/deployment-worker.yml
 }
 
-function kubeget() {
+function kget() {
   kubectl get pods | grep $1
+}
+
+function klog() {
+  kubectl logs -f $1
 }
 
 function kubeshell() {
@@ -85,7 +89,7 @@ function kubekill() {
   fi
 }
 
-function kubedelete() {
+function kdel() {
   kubectl delete pod $1
 }
 

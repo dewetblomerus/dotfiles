@@ -27,6 +27,18 @@
     }
   },
   {
+    "key": "cmd+alt+u",
+    "command": "terminalCommandKeys.run",
+    "when": "resourceExtname == .exs",
+    "args": {
+      "cmd": "mix test ${file}",
+      "newTerminal": false,
+      "saveAllFiles": true,
+      "showTerminal": true,
+      "focus": false
+    }
+  },
+  {
     "key": "ctrl+`",
     "command": "workbench.action.terminal.focus",
     "when": "!terminalFocus"
