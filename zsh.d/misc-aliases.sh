@@ -3,7 +3,7 @@ alias bunn="DEPENDENCIES_NEXT=1 bundle"
 alias c="code ."
 alias cod="cd ~/code"
 alias com="cd ~/code/gitlab/www-gitlab-com"
-alias dew='cd ~/dewetblomerus.github.io'
+alias dew='cd ~/code/dewetblomerus.github.io'
 alias dm="docker-machine"
 alias dn="DEPENDENCIES_NEXT=1"
 alias dot="cd ~/dotfiles"
