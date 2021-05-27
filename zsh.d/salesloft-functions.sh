@@ -7,7 +7,7 @@ function s() {
     foreman s
   elif [[ $PWD/ = */src/switchboard/* ]]; then
     cd ~/src/switchboard
-    foreman s
+    bundle exec foreman s -e k8s/dev/dev.env
   elif [[ $PWD/ = */src/rhapsody/* ]]; then
     cd ~/src/rhapsody
     npm start

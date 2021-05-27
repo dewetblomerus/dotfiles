@@ -26,6 +26,7 @@ alias lay="cd ~/code/ergodox/ergodox-firmware/firmware/keyboard/ergodox/layout"
 alias password="~/code/ruby/keep-talking/password.rb"
 alias pin='ping 8.8.8.8'
 alias pin="ping yomurafiber.com"
+alias qui="cd ~/code/elixir/quick_average"
 alias rename="elixir ~/code/elixir/rename-receipts/rename_receipts.exs"
 alias rof="bundle exec rspec --only-failures"
 alias rok="ngrok start --all"
