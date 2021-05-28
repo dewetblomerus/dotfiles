@@ -1,9 +1,5 @@
 [
   {
-    "key": "alt+cmd+c",
-    "command": "extension.ActiveFileInStatusBarClicked"
-  },
-  {
     "key": "cmd+alt+i",
     "command": "extension.multiCommand.execute",
     "args": {
