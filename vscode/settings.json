@@ -10,6 +10,7 @@
     "editor.formatOnSave": false
   },
   "[html]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "cSpell.words": [],
@@ -85,6 +86,7 @@
     "javascript",
     "keyscore",
     "kubernetes",
+    "leex",
     "linkedin",
     "localdial",
     "lpdids",
@@ -208,9 +210,5 @@
     "html-eex": "html",
     "elixir": "html"
   },
-  "emmet.triggerExpansionOnTab": true,
-  "workbench.welcomePage.hiddenCategories": [
-    "Beginner",
-    "Setup"
-  ],
+  "emmet.triggerExpansionOnTab": true
 }
