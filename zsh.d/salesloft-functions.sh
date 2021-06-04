@@ -11,6 +11,9 @@ function s() {
   elif [[ $PWD/ = */src/rhapsody/* ]]; then
     cd ~/src/rhapsody
     npm start
+  elif [[ $PWD/ = */src/search-service/* ]]; then
+    cd ~/src/search-service
+    mix phx.server
   else
     echo 'This build script currently only works for Melody, Gandalf and Rhapsody'
   fi
