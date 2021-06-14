@@ -14,6 +14,9 @@ function s() {
   elif [[ $PWD/ = */src/search-service/* ]]; then
     cd ~/src/search-service
     mix phx.server
+  elif [[ $PWD/ = */src/dewey/* ]]; then
+    cd ~/src/dewey
+    mix run --no-halt
   else
     echo 'This build script currently only works for Melody, Gandalf and Rhapsody'
   fi
