@@ -17,8 +17,11 @@ function s() {
   elif [[ $PWD/ = */src/dewey/* ]]; then
     cd ~/src/dewey
     mix run --no-halt
+  elif [[ $PWD/ = */src/migrater/* ]]; then
+    cd ~/src/migrater
+    mix phx.server
   else
-    echo 'This build script currently only works for Melody, Gandalf and Rhapsody'
+    echo 'This build script currently only works for Melody, Gandalf, Rhapsody, Switchboard, Search Service, Dewey and Migrater'
   fi
 }
 
