@@ -129,5 +129,9 @@ function rhycp() {
 }
 
 function kud() {
+  kustomize build deploy/manifests/qa/qa$1 | kubectl --context qa$1 apply -f -
+}
+
+function kudg() {
   kustomize build deploy/manifests/qa/qa$1 | kubectl --context qa$1-global apply -f -
 }
