@@ -8,6 +8,7 @@ alias fosnotweb="foreman start --formation web=0,insecure=1,worker=1,scheduler=1
 alias fosweb="foreman start --formation web=1,insecure=0,worker=0,scheduler=0,event-dispatcher=0,acl-changes=0,lcs-billing=0,dispatcher=0,partitioner=0"
 alias gaa="cd ~/src/global_api_access_service"
 alias gan="cd ~/src/gandalf"
+alias ran="cd ~/src/gandalf-router"
 alias hea="cd ~/src/healer"
 alias k8tra="cd ~/src/k8s-services-config-qa/tracer-bullet"
 alias kbgaa="kustomize build ~/src/dev-o-nomicon/k8s/service-groups/gaas | kubectl apply -f -"

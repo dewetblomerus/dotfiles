@@ -20,6 +20,9 @@ function s() {
   elif [[ $PWD/ = */src/migrater/* ]]; then
     cd ~/src/migrater
     mix phx.server
+  elif [[ $PWD/ = */src/gandalf-router/* ]]; then
+    cd ~/src/gandalf-router
+    mix phx.server
   elif [[ $PWD/ = */Users/dewet/code/elixir/quick_average* ]]; then
     cd ~/code/elixir/quick_average
     mix phx.server
