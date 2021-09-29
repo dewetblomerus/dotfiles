@@ -221,5 +221,6 @@
     "html-eex": "html",
     "elixir": "html"
   },
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "search.searchOnTypeDebouncePeriod": 50
 }
