@@ -222,5 +222,6 @@
     "elixir": "html"
   },
   "emmet.triggerExpansionOnTab": true,
-  "search.searchOnTypeDebouncePeriod": 50
+  "search.searchOnTypeDebouncePeriod": 50,
+  "editor.folding": false
 }
