@@ -1,7 +1,7 @@
 function s() {
   if [[ $PWD/ = */src/melody/* ]]; then
     cd ~/src/melody
-    foreman s
+    bundle exec foreman start -e k8s/dev/dev.env
   elif [[ $PWD/ = */src/gandalf/* ]]; then
     cd ~/src/gandalf
     foreman s
