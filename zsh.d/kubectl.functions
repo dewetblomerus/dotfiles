@@ -17,21 +17,8 @@ function klog() {
   kubectl logs -f $1
 }
 
-function kubeshell() {
-  if [ -z "$1" ]
-    then
-      echo "☠️ You must include a service name as an argument"
-      return 1
-    else
-      POD=$(kubectl get pods | grep ${1}-[0-9] | grep Running | head -1 | awk {'print $1'})
-      if [ -z "$POD" ]
-        then
-          echo "No matching pod found"
-          return 1
-        else
-          kubectl exec -it $POD /bin/bash || kubectl exec -it $POD /bin/sh
-      fi
-  fi
+function kshell() {
+  kubectl exec -it deployment/$1 -- bash
 }
 
 function ksp() {
