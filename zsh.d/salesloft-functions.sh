@@ -26,6 +26,9 @@ function s() {
   elif [[ $PWD/ = */Users/dewet/code/elixir/quick_average* ]]; then
     cd ~/code/elixir/quick_average
     mix phx.server
+  elif [[ $PWD/ = */Users/dewet/code/elixir/refer* ]]; then
+    cd ~/code/elixir/refer
+    mix phx.server
   else
     echo 'This build script currently only works for Melody, Gandalf, Rhapsody, Switchboard, Search Service, Dewey and Migrater'
   fi
