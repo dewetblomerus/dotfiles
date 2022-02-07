@@ -224,5 +224,7 @@
   },
   "emmet.triggerExpansionOnTab": true,
   "search.searchOnTypeDebouncePeriod": 50,
-  "editor.folding": false
+  "editor.folding": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active"
 }
