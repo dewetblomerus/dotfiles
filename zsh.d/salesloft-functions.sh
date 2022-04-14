@@ -10,7 +10,7 @@ function s() {
     bundle exec foreman s -e k8s/dev/dev.env
   elif [[ $PWD/ = */src/rhapsody/* ]]; then
     cd ~/src/rhapsody
-    npm start
+    pnpm start
   elif [[ $PWD/ = */src/search-service/* ]]; then
     cd ~/src/search-service
     mix phx.server
