@@ -215,5 +215,6 @@
   "search.searchOnTypeDebouncePeriod": 50,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false
 }
