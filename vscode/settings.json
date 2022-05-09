@@ -14,7 +14,7 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "editor.acceptSuggestionOnEnter": "off",
-  "editor.autoIndent": true,
+  "editor.autoIndent": "full",
   "editor.detectIndentation": false,
   "editor.fontSize": 17,
   "editor.formatOnSave": true,
