@@ -59,10 +59,10 @@ function b() {
     mv build ../.tmp_to_remove
     rm -rf ../.tmp_to_remove &
     echo "Running npm install"
-    npm install
+    pnpm install
     say done
     echo "Running npm start"
-    npm start
+    pnpm local
   else
     echo 'This build script currently only works for Rhapsody, Rhythm  and Sidecar'
   fi
