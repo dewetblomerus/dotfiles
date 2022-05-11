@@ -38,9 +38,10 @@ unsetopt inc_append_history
 unsetopt share_history
 
 # ssh-add -K ~/.ssh/id_rsa
-eval "$(nodenv init -)"
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
 export GPG_TTY=$(tty)
 
+export PNPM_HOME="/Users/dewet/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"

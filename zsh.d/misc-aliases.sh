@@ -42,3 +42,4 @@ alias scrspace="cd ~/Library/Application\ Support/screeps/scripts/screeps_space_
 alias sour="source ~/dotfiles/zshrc"
 alias sourcedot="source ~/dotfiles/zshrc"
 alias sourdot="source ~/dotfiles/zshrc"
+alias spe="cd ~/code/elixir/speedy"
