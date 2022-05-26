@@ -102,6 +102,7 @@
     "monospace",
     "move",
     "multiline",
+    "Multitouch",
     "newrelic",
     "nginx",
     "ngram",
@@ -152,6 +153,7 @@
     "systemvars",
     "tailwind",
     "tailwindcss",
+    "testid",
     "theming",
     "timecop",
     "timezones",
@@ -216,5 +218,11 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "tabnine.experimentalAutoImports": true,
-  "terminal.integrated.enableMultiLinePasteWarning": false
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
