@@ -9,7 +9,7 @@
 [user]
 	email = dewet.blomerus@salesloft.com
 	name = De Wet Blomerus
-	signingkey = 47AA3D165191DC54808B9EA3E120E44D174E6EF0
+	signingkey = 7536E54A80DC64C5
 [push]
 	default = current
 [core]
@@ -48,3 +48,5 @@
 	gpgsign = true
 [tag]
 	gpgSign = true
+[gpg]
+	program = gpg
