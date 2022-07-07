@@ -4,34 +4,6 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set encoding=utf-8
 set fileencoding=utf-8
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-" let Vundle manage Vundle, required
-  Plugin 'gmarik/Vundle.vim'
-  Plugin 'kien/ctrlp.vim'
-  Plugin 'bling/vim-airline'
-  Plugin 'airblade/vim-gitgutter'
-  Plugin 'elixir-lang/vim-elixir'
-  Plugin 'leafgarland/typescript-vim'
-  Bundle 'csexton/trailertrash.vim'
-  Bundle "pangloss/vim-javascript"
-  Bundle 'scrooloose/syntastic'
-  Bundle 'scrooloose/nerdtree'
-  Bundle 'ervandew/supertab'
-  Bundle 'thoughtbot/vim-rspec'
-  Bundle 'godlygeek/tabular'
-  Bundle 'rking/ag.vim'
-  Bundle 'tpope/vim-rails'
-  Bundle 'tpope/vim-fugitive'
-  Bundle 'tpope/vim-endwise'
-  Bundle 'jgdavey/tslime.vim'
-  Bundle 'vim-ruby/vim-ruby'
-  Bundle 'takac/vim-hardtime'
-  Bundle 'git://github.com/nathanaelkane/vim-command-w.git'
-  " All of your Plugins must be added before the following line
-call vundle#end()            " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
