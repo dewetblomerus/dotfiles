@@ -2,3 +2,4 @@ oh-my-zsh
 .env
 env
 *secret*
+config/gcloud
