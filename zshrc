@@ -26,20 +26,10 @@ source $HOME/dotfiles/.env
 #export NVM_DIR="$HOME/.nvm"
 #  . "/usr/local/opt/nvm/nvm.sh"
 
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
-source /Users/dewet/.projectrc # SalesLoft Unbocksen setup.sh
-
-source $HOME/.asdf/asdf.sh
-source $HOME/.asdf/completions/asdf.bash
 unsetopt inc_append_history
 unsetopt share_history
 
 # ssh-add -K ~/.ssh/id_rsa
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
 export GPG_TTY=$(tty)
 
