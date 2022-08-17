@@ -1,16 +1,16 @@
 function s() {
   if [[ $PWD/ = */src/melody/* ]]; then
     cd ~/src/melody
-    bundle exec foreman start -e k8s/dev/dev.env
+    bundle exec foreman start -e deploy/manifests/dev/dev.env
   elif [[ $PWD/ = */src/gandalf/* ]]; then
     cd ~/src/gandalf
     foreman s
   elif [[ $PWD/ = */src/switchboard/* ]]; then
     cd ~/src/switchboard
-    bundle exec foreman s -e k8s/dev/dev.env
+    bundle exec foreman start -e deploy/manifests/dev/dev.env
   elif [[ $PWD/ = */src/rhapsody/* ]]; then
     cd ~/src/rhapsody
-    pnpm start
+    pnpm local
   elif [[ $PWD/ = */src/search-service/* ]]; then
     cd ~/src/search-service
     mix phx.server
