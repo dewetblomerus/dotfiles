@@ -61,5 +61,9 @@
     "key": "shift+alt+cmd+c",
     "command": "-copyRelativeFilePath",
     "when": "!editorFocus"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "editor.action.sortLinesAscending"
   }
 ]
