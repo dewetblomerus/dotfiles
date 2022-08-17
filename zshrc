@@ -35,6 +35,7 @@ export GPG_TTY=$(tty)
 
 export PNPM_HOME="/Users/dewet/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
