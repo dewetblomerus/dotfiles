@@ -9,7 +9,7 @@ alias dn="DEPENDENCIES_NEXT=1"
 alias dot="cd ~/dotfiles"
 alias dow="cd ~/Downloads"
 alias eli="cd ~/code/elixir"
-alias exe='cd ~/exercism/ruby'
+alias exe='cd ~/code/exercism'
 alias fos="foreman s"
 alias gitcop="git diff master --name-only | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a"
 alias gits='git status'

@@ -228,4 +228,15 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "privateExtensions.registries": [
+    {
+      "name": "SalesLoft Registry",
+      "registry": "https://npms.salesloft.com",
+      "query": [
+        "vscode"
+      ],
+      "token": "oO/T6PS7rOAzoIqrc/AHw63/Te0aWhf4O+L3F+pi2OnZ4BxdWdEL3s9iZHo3khAv"
+    }
+  ],
+  "workbench.panel.defaultLocation": "right",
 }
