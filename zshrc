@@ -22,6 +22,7 @@ if [ -d $HOME/.zsh.d ]; then
 fi
 
 source $HOME/dotfiles/.env
+source $HOME/.asdf/installs/rust/1.64.0/env
 
 #export NVM_DIR="$HOME/.nvm"
 #  . "/usr/local/opt/nvm/nvm.sh"
