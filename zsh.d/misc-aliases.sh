@@ -23,6 +23,7 @@ alias k="kubectl"
 alias kf="kubectl exec -it \`kubectl get pods | fzf | awk '{print \$1}'\` /bin/bash"
 alias lab="cd ~/code/gitlab"
 alias lay="cd ~/code/ergodox/ergodox-firmware/firmware/keyboard/ergodox/layout"
+alias not="cd ~/code/elixir/notify"
 alias password="~/code/ruby/keep-talking/password.rb"
 alias pin='ping 8.8.8.8'
 alias pin="ping yomurafiber.com"
