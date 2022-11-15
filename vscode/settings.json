@@ -239,4 +239,5 @@
     }
   ],
   "workbench.panel.defaultLocation": "right",
+  "liveServer.settings.donotShowInfoMsg": true,
 }
