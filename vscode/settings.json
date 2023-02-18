@@ -240,4 +240,5 @@
   ],
   "workbench.panel.defaultLocation": "right",
   "liveServer.settings.donotShowInfoMsg": true,
+  "editor.inlineSuggest.enabled": true,
 }
