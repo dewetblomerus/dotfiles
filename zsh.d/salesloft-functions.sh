@@ -4,7 +4,7 @@ function s() {
     bundle exec foreman start -e deploy/manifests/dev/dev.env
   elif [[ $PWD/ = */src/gandalf/* ]]; then
     cd ~/src/gandalf
-    foreman s
+    bundle exec foreman start -e deploy/manifests/dev/dev.env
   elif [[ $PWD/ = */src/switchboard/* ]]; then
     cd ~/src/switchboard
     bundle exec foreman start -e deploy/manifests/dev/dev.env
