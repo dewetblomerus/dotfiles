@@ -37,6 +37,7 @@ export GPG_TTY=$(tty)
 export PNPM_HOME="/Users/dewet/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh

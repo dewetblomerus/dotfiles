@@ -241,4 +241,7 @@
   "workbench.panel.defaultLocation": "right",
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.inlineSuggest.enabled": true,
+  "solargraph.useBundler": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
 }
