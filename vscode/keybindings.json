@@ -1,16 +1,5 @@
 [
   {
-    "key": "cmd+alt+i",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": [
-        "workbench.action.files.save",
-        "extension.rerunLastCommand"
-      ]
-    },
-    "when": "editorTextFocus"
-  },
-  {
     "key": "cmd+alt+u",
     "command": "terminalCommandKeys.run",
     "when": "resourceExtname == .rb",
@@ -65,5 +54,23 @@
   {
     "key": "shift+cmd+a",
     "command": "editor.action.sortLinesAscending"
+  },
+  {
+    "key": "shift+alt+cmd+i",
+    "command": "workbench.action.toggleDevTools",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "alt+cmd+i",
+    "command": "-workbench.action.toggleDevTools",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "alt+cmd+i",
+    "command": "extension.rerunLastCommand"
+  },
+  {
+    "key": "cmd+f7",
+    "command": "-extension.rerunLastCommand"
   }
 ]
