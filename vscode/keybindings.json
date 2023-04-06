@@ -66,8 +66,15 @@
     "when": "isDevelopment"
   },
   {
-    "key": "alt+cmd+i",
-    "command": "extension.rerunLastCommand"
+    "key": "cmd+alt+i",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.files.save",
+        "extension.rerunLastCommand"
+      ]
+    },
+    "when": "editorTextFocus"
   },
   {
     "key": "cmd+f7",
