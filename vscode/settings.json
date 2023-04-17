@@ -232,9 +232,7 @@
     {
       "name": "SalesLoft Registry",
       "registry": "https://npms.salesloft.com",
-      "query": [
-        "vscode"
-      ],
+      "query": ["vscode"],
       "token": "oO/T6PS7rOAzoIqrc/AHw63/Te0aWhf4O+L3F+pi2OnZ4BxdWdEL3s9iZHo3khAv"
     }
   ],
