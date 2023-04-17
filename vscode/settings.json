@@ -242,4 +242,7 @@
   "solargraph.useBundler": true,
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,
+  "editor.rulers": [
+    80
+  ],
 }
