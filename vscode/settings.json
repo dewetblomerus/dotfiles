@@ -37,7 +37,6 @@
   "gitlens.keymap": "chorded",
   "terminal.integrated.fontSize": 16,
   "vim.autoindent": true,
-  "workbench.activityBar.visible": false,
   "cSpell.userWords": [
     "access",
     "API",
@@ -242,7 +241,8 @@
   "solargraph.useBundler": true,
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
+  "window.zoomLevel": 0,
+  "html.format.maxPreserveNewLines": 1,
+  "html.format.wrapLineLength": 100
 }
