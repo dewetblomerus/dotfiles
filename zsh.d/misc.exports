@@ -8,3 +8,4 @@ export PGHOST='localhost'
 export ELIXIR_EDITOR="sh /usr/local/bin/code"
 export ECTO_EDITOR=$ELIXIR_EDITOR
 export PLUG_EDITOR=$ELIXIR_EDITOR
+export ERL_AFLAGS="-kernel shell_history enabled"
