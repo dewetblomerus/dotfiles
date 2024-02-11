@@ -43,3 +43,5 @@ Remember to close the terminal and open it again. Last time I forgot to do this
 and `:PluginInstall` did not work in Vim. I ended up running
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 to get it to work.
+
+test

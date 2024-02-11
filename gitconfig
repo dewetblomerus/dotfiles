@@ -7,9 +7,9 @@
     !git branch \
     --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [user]
-	email = dewet.blomerus@salesloft.com
+	email = dewetblomerus@gmail.com
 	name = De Wet Blomerus
-	signingkey = 7536E54A80DC64C5
+	signingkey = 3BB63410B0886CE5
 [push]
 	default = current
 [core]
